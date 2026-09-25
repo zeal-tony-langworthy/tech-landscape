@@ -42,6 +42,11 @@ CLASSIFY_TOOL = {
                         "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
                         "homepage_url": {"type": "string"},
                         "skip": {"type": "boolean"},
+                        "same_as": {
+                            "type": "string",
+                            "description": "Exact name of the existing item this is the same "
+                                           "technology as; empty if none.",
+                        },
                         "note": {"type": "string"},
                     },
                     "required": ["input", "skill", "category", "subcategory",
@@ -64,6 +69,10 @@ across many batches.
 {taxonomy}
 </taxonomy>
 
+<existing_items>
+{existing_items}
+</existing_items>
+
 <rules>
 1. Assign exactly one category and one subcategory from the taxonomy, based on the
    tool's PRIMARY use. If a tool spans several areas, pick the one a hiring manager
@@ -82,6 +91,11 @@ across many batches.
 7. Set "skip": true for anything that isn't a specific, named technology, such as
    generic concepts ("REST APIs", "microservices"), methodologies, or soft skills.
    Explain briefly in "note". Still fill in the other fields with your best guess.
+8. If the input is the same technology as one of the existing items, even under a
+   different name, abbreviation, or vendor prefix (e.g., "Apache Kafka" and "Kafka",
+   "K8s" and "Kubernetes", "Postgres" and "PostgreSQL"), set "same_as" to that existing
+   item's name exactly as written. Otherwise leave "same_as" empty. An input that is
+   itself an existing item is not "same_as" anything.
 </rules>
 
 <output_format>
@@ -139,30 +153,30 @@ def skill_names(data: dict, path) -> list[str]:
     return names
 
 
-def count_pdf_skills() -> tuple[dict[str, int], dict[str, str]]:
-    """How many documents mention each skill (not how many times), by normalized name."""
+def count_pdf_skills() -> tuple[dict[str, set[str]], dict[str, str]]:
+    """Which documents mention each skill, by normalized name. Sets rather than counts,
+    so merging two spellings of one skill doesn't count a document twice."""
     files = sorted(EXTRACT_DIR.glob("*.json"))
     if not files:
         sys.exit("No extractions found. Run `extract` first.")
 
-    doc_count: dict[str, int] = defaultdict(int)
+    docs: dict[str, set[str]] = defaultdict(set)
     display: dict[str, str] = {}
     for path in files:
-        seen = set()
         for name in skill_names(json.loads(path.read_text()), path):
             key = helpers.normalize(name)
-            if key and key not in seen:
-                seen.add(key)
-                doc_count[key] += 1
+            if key:
+                docs[key].add(path.name)
                 display.setdefault(key, name)
-    print(f"{len(files)} documents, {len(doc_count)} distinct skills.")
-    return doc_count, display
+    print(f"{len(files)} documents, {len(docs)} distinct skill names.")
+    return docs, display
 
 
-def classify(names: list[str]) -> dict[str, dict]:
+def classify(names: list[str], existing_names: list[str]) -> dict[str, dict]:
     """Classify names in batches. Returns results keyed by normalized input name."""
     client = helpers.claude_client()
-    system = CLASSIFY_SYSTEM.format(taxonomy=render_taxonomy())
+    system = CLASSIFY_SYSTEM.format(taxonomy=render_taxonomy(),
+                                    existing_items="\n".join(sorted(existing_names)))
     results: dict[str, dict] = {}
     for i in range(0, len(names), CLASSIFY_BATCH_SIZE):
         batch = names[i:i + CLASSIFY_BATCH_SIZE]
@@ -216,7 +230,7 @@ def sort_key(entry) -> tuple:
 def cmd_review(args):
     landscape = helpers.load_landscape(args.data)
     existing = helpers.existing_items(landscape)  # normalized -> name in data.yml
-    doc_count, display = count_pdf_skills()
+    docs, display = count_pdf_skills()
 
     # Existing items already placed in a taxonomy category keep their placement
     # and aren't sent to Claude, so reviewed decisions stay put across runs.
@@ -230,22 +244,57 @@ def cmd_review(args):
     kept = {k for k, (cat, _) in placement.items() if cat in TAXONOMY and not reclassify}
     to_classify = [name for k, name in existing.items() if k not in kept]
 
-    new = sorted(
-        (k for k in doc_count if k not in existing and doc_count[k] >= args.min_docs),
-        key=lambda k: (-doc_count[k], display[k].lower()),
-    )
+    # All new names are classified, and --min-docs is applied after merging, so
+    # "K8s" in one PDF and "Kubernetes" in another count as two documents.
+    new_keys = sorted((k for k in docs if k not in existing),
+                      key=lambda k: (-len(docs[k]), display[k].lower()))
     print(f"{len(existing)} skills already in data.yml ({len(kept)} already placed, "
-          f"{len(to_classify)} to classify), {len(new)} new (min docs: {args.min_docs}).")
+          f"{len(to_classify)} to classify), {len(new_keys)} new names from the PDFs.")
 
-    names = to_classify + [display[k] for k in new]
-    results = classify(names) if names else {}
+    names = to_classify + [display[k] for k in new_keys]
+    results = classify(names, list(existing.values())) if names else {}
+
+    # --- Merge: every new name resolves to one skill, existing or new ---------
+    extra_docs: dict[str, set[str]] = defaultdict(set)   # existing key -> merged docs
+    variants: dict[str, list[str]] = defaultdict(list)   # target key -> other spellings
+    new_groups: dict[str, dict] = {}                      # canonical key -> merged new skill
+
+    for key in new_keys:
+        r = results.get(key, {})
+        same_as = helpers.normalize(r.get("same_as") or "")
+        skill_key = helpers.normalize(r.get("skill") or "")
+        target = same_as if same_as in existing else skill_key if skill_key in existing else None
+
+        if target:
+            extra_docs[target] |= docs[key]
+            variants[target].append(display[key])
+            continue
+
+        canonical = skill_key or key
+        group = new_groups.get(canonical)
+        if group is None:
+            new_groups[canonical] = {"r": r, "key": key, "docs": set(docs[key])}
+        else:
+            group["docs"] |= docs[key]
+        variants[canonical].append(display[key])
+
+    merged = len(new_keys) - len(new_groups)
+    if merged:
+        print(f"Merged {merged} alternate spellings into other entries.")
+
+    def seen_as(key: str, final_name: str) -> str | None:
+        """Note listing the other spellings merged into this entry, if any."""
+        names = sorted({v for v in variants.get(key, [])
+                        if helpers.normalize(v) != helpers.normalize(final_name)})
+        return f"Also in PDFs as: {', '.join(names)}." if names else None
 
     entries = []
-    new_names = set()
 
     for key, current_name in existing.items():
+        documents = len(docs.get(key, set()) | extra_docs.get(key, set()))
         if key in kept:
             category, subcategory = placement[key]
+            notes = ["Current placement kept."]
             entry = CommentedMap()
             entry["status"] = "existing"
             entry["approve"] = True
@@ -254,44 +303,41 @@ def cmd_review(args):
             entry["category"] = category
             entry["subcategory"] = subcategory
             entry["new_subcategory"] = not is_valid(category, subcategory)
-            entry["documents"] = doc_count.get(key, 0)
-            entry["note"] = "Current placement kept."
-            entries.append(entry)
-            continue
-
-        r = results.get(key, {})
-        approve, notes = check(r, is_new=False)
-        name = r.get("skill") or current_name
-        if name != current_name:
-            notes.append(f"Will be renamed from '{current_name}'.")
-
-        entry = CommentedMap()
-        entry["status"] = "existing"
-        entry["approve"] = approve
-        entry["name"] = name
-        entry["current_name"] = current_name
-        entry["category"] = r.get("category")
-        entry["subcategory"] = r.get("subcategory")
-        entry["new_subcategory"] = bool(r.get("new_subcategory"))
-        entry["confidence"] = r.get("confidence")
-        entry["secondary"] = CommentedSeq(r.get("secondary") or [])
-        entry["documents"] = doc_count.get(key, 0)
+        else:
+            r = results.get(key, {})
+            approve, notes = check(r, is_new=False)
+            name = r.get("skill") or current_name
+            if name != current_name:
+                notes.append(f"Will be renamed from '{current_name}'.")
+            dup = helpers.normalize(r.get("same_as") or "")
+            if dup in existing and dup != key:
+                notes.append(f"Looks like a duplicate of existing item '{existing[dup]}'; "
+                             "remove one of them from data.yml.")
+            entry = CommentedMap()
+            entry["status"] = "existing"
+            entry["approve"] = approve
+            entry["name"] = name
+            entry["current_name"] = current_name
+            entry["category"] = r.get("category")
+            entry["subcategory"] = r.get("subcategory")
+            entry["new_subcategory"] = bool(r.get("new_subcategory"))
+            entry["confidence"] = r.get("confidence")
+            entry["secondary"] = CommentedSeq(r.get("secondary") or [])
+        entry["documents"] = documents
+        if seen_as(key, entry["name"]):
+            notes.append(seen_as(key, entry["name"]))
         if notes:
             entry["note"] = " ".join(notes)
         entries.append(entry)
 
-    for key in new:
-        r = results.get(key, {})
+    for canonical, group in new_groups.items():
+        if len(group["docs"]) < args.min_docs:
+            continue
+        r, key = group["r"], group["key"]
         approve, notes = check(r, is_new=True)
         name = r.get("skill") or display[key]
-        norm = helpers.normalize(name)
-        if norm in existing:
-            notes.append(f"Same as existing item '{existing[norm]}'.")
-            approve = False
-        elif norm in new_names:
-            notes.append("Duplicate of another new entry in this file.")
-            approve = False
-        new_names.add(norm)
+        if seen_as(canonical, name):
+            notes.append(seen_as(canonical, name))
 
         logo = f"{slugify(name)}.svg"
         entry = CommentedMap()
@@ -306,7 +352,7 @@ def cmd_review(args):
         entry["homepage_url"] = r.get("homepage_url")
         entry["logo"] = logo
         entry["logo_exists"] = (args.logos / logo).exists()
-        entry["documents"] = doc_count[key]
+        entry["documents"] = len(group["docs"])
         if notes:
             entry["note"] = " ".join(notes)
         entries.append(entry)
@@ -324,8 +370,11 @@ def cmd_review(args):
             "#   Its URL, logo, and other fields are kept from data.yml.\n"
             "# status: new = found in the PDFs; approve: false leaves it out.\n"
             "#\n"
+            "# Each skill appears once; other spellings found in the PDFs are merged into\n"
+            "# it and listed in the note.\n"
+            "#\n"
             "# approve defaults to false for low confidence, proposed new subcategories,\n"
-            "# skip suggestions, and duplicates. Edit any field as needed.\n"
+            "# and skip suggestions. Edit any field as needed.\n"
             "# documents = how many PDFs mention the skill.\n"
         )
         yaml.dump({"skills": entries}, fh)
