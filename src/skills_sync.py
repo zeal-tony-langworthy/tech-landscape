@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import helpers
 import extract
+import review
 from pathlib import Path
 
 def main():
@@ -42,6 +43,11 @@ def main():
     p = sub.add_parser("extract", help="Extract skills from the Drive PDFs")
     p.add_argument("--force", action="store_true", help="Reprocess every PDF, ignoring the cache")
     p.set_defaults(func=extract.cmd_extract)
+
+    p = sub.add_parser("review", help="Find and classify new skills; write new_skills.yml")
+    p.add_argument("--min-docs", type=int, default=1,
+                   help="Only include skills mentioned in at least this many PDFs")
+    p.set_defaults(func=review.cmd_review)
 
     args = parser.parse_args()
     args.func(args)
