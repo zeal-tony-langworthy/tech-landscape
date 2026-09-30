@@ -1,255 +1,1733 @@
 landscape:
   - category:
-    name: Category 1
+    name: Programming Languages
     subcategories:
       - subcategory:
-        name: Subcategory 1-0
+        name: General Purpose
         items:
           - item:
-            homepage_url: https://spring.io/projects/spring-boot
-            logo: spring-boot.svg
-            name: Spring Boot
-          - item:
-            homepage_url: https://learn.microsoft.com/en-us/aspnet/core/
-            logo: dotnet.svg
-            name: ASP.NET
-          - item:
-            homepage_url: https://angular.dev/
-            logo: angular.svg
-            name: Angular
-          - item:
-            homepage_url: https://react.dev/
-            logo: react.svg
-            name: React
-          - item:
-            name: Vue.js
-            homepage_url: https://vuejs.org/
-            repo_url: https://github.com/vuejs/core
-            logo: vuejs.svg
-          - item:
-            name: next.js
-            homepage_url: https://nextjs.org/
-            repo_url: https://github.com/vercel/next.js
-            logo: nextjs-logotype-light-background.svg
-          - item:
-            name: Blazor
-            homepage_url: https://learn.microsoft.com/en-us/aspnet/core/blazor/
-            logo: blazor.svg
-      - subcategory:
-        name: Subcategory 1-1
-        items:
-          - item:
-            description: This is the description of C#
+            description: Object-oriented, statically typed programming language developed by Microsoft for the .NET platform, used to build web, desktop, mobile, and game applications.
             homepage_url: https://learn.microsoft.com/en-us/dotnet/csharp/
             logo: csharp-128.png
             name: C#
             repo_url: https://github.com/dotnet/csharplang
           - item:
-            description: This is the description of Java
+            name: COBOL
+            description: Older procedural programming language designed for business and administrative data processing, still widely used in legacy mainframe systems in banking and government.
+            homepage_url: https://www.ibm.com/topics/cobol
+            logo: cobol.svg
+          - item:
+            name: Dart
+            description: Object-oriented programming language developed by Google, primarily used with the Flutter framework to build cross-platform mobile, web, and desktop applications.
+            homepage_url: https://dart.dev/
+            logo: dart.svg
+          - item:
+            name: Go
+            description: Statically typed, compiled programming language created at Google, valued for its simplicity and built-in support for concurrency; commonly used for backend services and infrastructure tooling.
+            homepage_url: https://go.dev/
+            logo: go.svg
+          - item:
+            name: Groovy
+            description: Dynamic programming language that runs on the Java Virtual Machine and interoperates closely with Java, often used for scripting, testing, and build automation such as Gradle.
+            homepage_url: https://groovy-lang.org/
+            logo: groovy.svg
+          - item:
+            description: Object-oriented, platform-independent programming language widely used for enterprise systems, Android app development, and large-scale backend services.
             homepage_url: https://dev.java/
             logo: openjdk2.svg
             name: Java
             repo_url: https://github.com/openjdk/jdk
           - item:
-            description: This is the description of JavaScript
+            name: Kotlin
+            description: Statically typed programming language that runs on the JVM and interoperates with Java, officially supported by Google as a primary language for Android development.
+            homepage_url: https://kotlinlang.org/
+            logo: kotlin.svg
+          - item:
+            name: Lua
+            description: Lightweight, embeddable scripting language commonly used to add configurable logic and extensibility to applications and video games.
+            homepage_url: https://www.lua.org/
+            logo: lua.svg
+          - item:
+            name: MATLAB
+            description: Numerical computing environment and programming language used for matrix operations, data analysis, algorithm prototyping, and engineering simulations.
+            homepage_url: https://www.mathworks.com/products/matlab.html
+            logo: matlab.svg
+          - item:
+            name: PL/SQL
+            description: Oracle's procedural extension of SQL, used to write stored procedures, functions, and triggers that implement business logic inside Oracle databases.
+            homepage_url: https://www.oracle.com/database/technologies/appdev/plsql.html
+            logo: pl-sql.svg
+          - item:
+            description: High-level, general-purpose programming language known for its readable syntax, widely used for web development, data science, automation, and scripting.
+            homepage_url: https://python.org/
+            logo: python-logo-only.svg
+            name: Python
+            repo_url: https://github.com/python/cpython
+          - item:
+            name: R
+            description: Programming language and environment focused on statistical computing and graphics, commonly used for data analysis and academic research.
+            homepage_url: https://www.r-project.org/
+            logo: r.svg
+          - item:
+            name: Scratch
+            description: Block-based visual programming language and online platform designed to teach programming concepts to children and beginners.
+            homepage_url: https://scratch.mit.edu/
+            logo: scratch.svg
+          - item:
+            name: Solidity
+            description: Statically typed programming language designed for writing smart contracts that run on the Ethereum blockchain and compatible platforms.
+            homepage_url: https://soliditylang.org/
+            logo: solidity.svg
+          - item:
+            name: SQL
+            description: Standard programming language used to query, update, and manage data stored in relational database systems.
+            homepage_url: https://en.wikipedia.org/wiki/SQL
+            logo: sql.svg
+          - item:
+            name: Swift
+            description: Statically typed, compiled programming language developed by Apple for building applications on iOS, macOS, and other Apple platforms.
+            homepage_url: https://www.swift.org/
+            logo: swift.svg
+          - item:
+            name: Transact-SQL
+            description: Microsoft's procedural extension of SQL used in SQL Server and Azure SQL Database for querying data and implementing stored procedures and triggers.
+            homepage_url: https://learn.microsoft.com/en-us/sql/t-sql/language-reference
+            logo: transact-sql.svg
+          - item:
+            name: VB.NET
+            description: Object-oriented programming language on the .NET platform, evolved from classic Visual Basic, used mainly for building Windows desktop and enterprise applications.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/visual-basic/
+            logo: vb-net.svg
+          - item:
+            name: VBA
+            description: Scripting language embedded in Microsoft Office applications, used to automate repetitive tasks and build custom functionality within documents and spreadsheets.
+            homepage_url: https://learn.microsoft.com/en-us/office/vba/api/overview/
+            logo: vba.svg
+          - item:
+            name: Visual Basic
+            description: Event-driven programming language and development environment originally created by Microsoft for building Windows applications with a simplified, beginner-friendly syntax.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/visual-basic/
+            logo: visual-basic.svg
+      - subcategory:
+        name: Web & Scripting
+        items:
+          - item:
+            name: ActionScript
+            description: Object-oriented scripting language originally used with Adobe Flash to create interactive animations and web applications, now largely obsolete.
+            homepage_url: https://en.wikipedia.org/wiki/ActionScript
+            logo: actionscript.svg
+          - item:
+            name: AJAX
+            description: Technique for making web browsers exchange data with a server asynchronously in the background, allowing pages to update content without a full reload.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX
+            logo: ajax.svg
+          - item:
+            name: CSS
+            description: Stylesheet language used to control the visual presentation of HTML documents, including layout, colors, fonts, and responsive design.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/CSS
+            logo: css.svg
+          - item:
+            name: HTML
+            description: Markup language used to structure content on web pages, defining elements like text, links, images, and forms.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/HTML
+            logo: html.svg
+          - item:
+            name: HTML/CSS
+            description: Combined use of the markup language HTML for structuring web content and CSS for styling its visual presentation, forming the core of front-end web development.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/HTML
+            logo: html-css.svg
+          - item:
+            name: HTML5
+            description: Version of HTML that adds semantic elements, multimedia support, and APIs for building modern interactive web applications without relying on plugins.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/HTML
+            logo: html5.svg
+          - item:
+            description: Scripting language used to add interactivity and dynamic behavior to web pages, and also used server-side and in many application environments.
             homepage_url: https://ecma-international.org/publications-and-standards/standards/ecma-262/
             logo: javascript.svg
             name: JavaScript
           - item:
-            description: This is the description of typescript
+            name: Liquid
+            description: Template language used to embed dynamic content and logic into web pages, commonly used for building themes on the Shopify e-commerce platform.
+            homepage_url: https://shopify.github.io/liquid/
+            logo: liquid.svg
+          - item:
+            name: Perl
+            description: General-purpose scripting language known for strong text-processing capabilities, historically popular for system administration and web CGI scripts.
+            homepage_url: https://www.perl.org/
+            logo: perl.svg
+          - item:
+            name: PHP
+            description: Server-side scripting language designed for web development, used to generate dynamic web pages and interact with databases.
+            homepage_url: https://www.php.net/
+            logo: php.svg
+          - item:
+            name: PowerShell
+            description: Command-line shell and scripting language used for task automation and configuration management, particularly on Windows and cloud systems.
+            homepage_url: https://learn.microsoft.com/en-us/powershell/
+            logo: powershell.svg
+          - item:
+            name: Ruby
+            description: General-purpose, dynamic programming language known for its clean syntax and readability, widely used for web development via frameworks like Rails.
+            homepage_url: https://www.ruby-lang.org/
+            logo: ruby.svg
+          - item:
+            name: Sass
+            description: CSS preprocessor that adds features like variables, nesting, and mixins to make writing and maintaining stylesheets more efficient.
+            homepage_url: https://sass-lang.com/
+            logo: sass.svg
+          - item:
+            description: Statically typed superset of JavaScript that compiles to plain JavaScript, adding type checking to help catch errors during development.
             homepage_url: https://www.typescriptlang.org/
             logo: typescript.svg
             name: TypeScript
             repo_url: https://github.com/microsoft/TypeScript
           - item:
-            description: This is the description of python
-            homepage_url: https://python.org/
-            logo: python-logo-only.svg
-            name: Python
-            repo_url: https://github.com/python/cpython
+            name: VBScript
+            description: Lightweight scripting language developed by Microsoft, historically used for automating tasks in Windows and for client-side scripting in Internet Explorer.
+            homepage_url: https://learn.microsoft.com/en-us/previous-versions/t0aew7h6(v=vs.85)
+            logo: vbscript.svg
+          - item:
+            name: XAML
+            description: Markup language used to define user interfaces declaratively in .NET applications, such as those built with WPF or UWP.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/xaml/
+            logo: xaml.svg
+      - subcategory:
+        name: Systems
+        items:
+          - item:
+            name: Bash
+            description: Unix shell and command language used for interacting with the operating system and writing automation scripts, common on Linux and macOS.
+            homepage_url: https://www.gnu.org/software/bash/
+            logo: bash.svg
+          - item:
+            name: Batch Script
+            description: Scripting language used to automate sequences of commands on Windows systems via the command-line interpreter.
+            homepage_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/batch
+            logo: batch-script.svg
+          - item:
+            name: C
+            description: Low-level, general-purpose programming language known for its efficiency and close relationship to hardware, widely used in operating systems and embedded software.
+            homepage_url: https://en.wikipedia.org/wiki/C_(programming_language)
+            logo: c.svg
+          - item:
+            name: C++
+            description: General-purpose programming language extending C with object-oriented and generic programming features, used in performance-critical applications like games and systems software.
+            homepage_url: https://isocpp.org/
+            logo: cplusplus.svg
+          - item:
+            name: C/C++
+            description: Pairing of the C and C++ programming languages, often grouped together due to their shared syntax and use in systems-level and performance-critical software.
+            homepage_url: https://isocpp.org/
+            logo: c-cplusplus.svg
+          - item:
+            name: KornShell (ksh)
+            description: Unix command-line shell and scripting language that combines features of the Bourne shell and C shell, used for interactive command execution and shell scripting.
+            homepage_url: https://en.wikipedia.org/wiki/KornShell
+            logo: kornshell-ksh.svg
+          - item:
+            name: Objective-C
+            description: General-purpose, object-oriented programming language that extends C with Smalltalk-style messaging, historically the primary language for macOS and iOS application development.
+            homepage_url: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+            logo: objective-c.svg
   - category:
-    name: Category 2
+    name: Frameworks & Libraries
     subcategories:
       - subcategory:
-        name: Subcategory 2-1
+        name: Backend Frameworks
         items:
           - item:
-            name: GitHub Actions
-            homepage_url: https://github.com/features/actions
-            logo: github-actions.svg
+            name: .NET
+            description: Cross-platform developer platform from Microsoft used to build web, desktop, mobile, cloud, and IoT applications across multiple programming languages.
+            homepage_url: https://dotnet.microsoft.com/
+            logo: net.svg
           - item:
-            name: Azure Pipelines
-            homepage_url: https://azure.microsoft.com/en-us/services/devops/pipelines/
-            logo: azure-pipelines.svg
+            name: .NET Core
+            description: Cross-platform, open-source implementation of .NET that ran on Windows, Linux, and macOS before being unified into the modern .NET platform.
+            homepage_url: https://dotnet.microsoft.com/
+            logo: net-core.svg
           - item:
-            name: Concourse
-            homepage_url: https://concourse-ci.org/
-            repo_url: https://github.com/concourse/concourse
-            logo: concourse.svg
+            name: .NET Framework
+            description: Original Windows-only implementation of .NET, providing a runtime and class libraries for building desktop and web applications on Windows.
+            homepage_url: https://dotnet.microsoft.com/en-us/download/dotnet-framework
+            logo: net-framework.svg
           - item:
-            name: GoCD
-            homepage_url: https://www.gocd.org/
-            repo_url: https://github.com/gocd/gocd
-            logo: gocd.svg
+            name: .NET Standard
+            description: Specification defining a common set of APIs that different .NET implementations must support, enabling code and libraries to be shared across them.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/standard/net-standard
+            logo: net-standard.svg
           - item:
-            name: Jenkins
-            homepage_url: https://jenkins.io/
-            repo_url: https://github.com/jenkinsci/jenkins
-            logo: jenkins.svg
+            name: Akka
+            description: Toolkit for building concurrent, distributed, and fault-tolerant applications on the JVM using the actor model for message-driven processing.
+            homepage_url: https://akka.io/
+            logo: akka.svg
           - item:
-            name: Puppet
-            homepage_url: https://puppet.com/
-            repo_url: https://github.com/puppetlabs/puppet
-            logo: puppet.svg
+            name: Apache CXF
+            description: Open-source Java framework for building and consuming web services, supporting both SOAP-based and RESTful service styles.
+            homepage_url: https://cxf.apache.org/
+            logo: apache-cxf.svg
           - item:
-            name: Terraform
-            homepage_url: https://www.terraform.io/
-            repo_url: https://github.com/hashicorp/terraform
-            logo: terraform.svg
+            name: Apache Tomcat
+            description: Open-source Java servlet container that implements core Java EE web specifications, used to deploy and run Java web applications.
+            homepage_url: https://tomcat.apache.org/
+            logo: apache-tomcat.svg
+          - item:
+            homepage_url: https://learn.microsoft.com/en-us/aspnet/core/
+            logo: dotnet.svg
+            name: ASP.NET
+            description: Web application framework from Microsoft for building dynamic websites, services, and APIs on the .NET platform.
+          - item:
+            name: ASP.NET Core
+            description: Cross-platform, open-source web framework from Microsoft, succeeding ASP.NET, used to build web apps, APIs, and microservices on modern .NET.
+            homepage_url: https://dotnet.microsoft.com/en-us/apps/aspnet
+            logo: asp-net-core.svg
+          - item:
+            name: ASP.NET Web Forms
+            description: Component of the original ASP.NET framework for building web applications using event-driven, server-side UI controls similar to desktop application development.
+            homepage_url: https://learn.microsoft.com/en-us/aspnet/web-forms/
+            logo: asp-net-web-forms.svg
+          - item:
+            name: AutoMapper
+            description: Library for .NET that automates the mapping of properties between objects, commonly used to convert between domain models and data transfer objects.
+            homepage_url: https://automapper.org/
+            logo: automapper.svg
+          - item:
+            name: Castle Windsor
+            description: Inversion of control container for .NET applications, used to manage object creation and dependency injection.
+            homepage_url: http://www.castleproject.org/projects/windsor/
+            logo: castle-windsor.svg
+          - item:
+            name: Dapper
+            description: Lightweight object-relational mapper for .NET that extends ADO.NET to map SQL query results to objects with minimal overhead.
+            homepage_url: https://github.com/DapperLib/Dapper
+            logo: dapper.svg
+          - item:
+            name: Django
+            description: High-level Python web framework that follows the model-view-template pattern, designed for rapid development of secure, maintainable websites.
+            homepage_url: https://www.djangoproject.com/
+            logo: django.svg
+          - item:
+            name: Drupal
+            description: Open-source content management system written in PHP, used to build, manage, and publish content-driven websites and web applications.
+            homepage_url: https://www.drupal.org/
+            logo: drupal.svg
+          - item:
+            name: Eclipse Jetty
+            description: Lightweight, embeddable Java HTTP server and servlet container, often used to power web applications and services within larger Java programs.
+            homepage_url: https://www.eclipse.org/jetty/
+            logo: eclipse-jetty.svg
+          - item:
+            name: EJS
+            description: Templating engine for JavaScript that generates HTML markup by embedding plain JavaScript code, commonly used with Node.js web applications.
+            homepage_url: https://ejs.co/
+            logo: ejs.svg
+          - item:
+            name: Entity Framework
+            description: Object-relational mapping framework for .NET that lets developers interact with databases using .NET objects instead of writing raw SQL.
+            homepage_url: https://learn.microsoft.com/en-us/ef/
+            logo: entity-framework.svg
+          - item:
+            name: Express
+            description: Minimalist web application framework for Node.js that provides routing, middleware, and HTTP utilities for building web servers and APIs.
+            homepage_url: https://expressjs.com/
+            logo: express.svg
+          - item:
+            name: Express.js
+            description: Minimalist web application framework for Node.js that provides routing, middleware, and HTTP utilities for building web servers and APIs.
+            homepage_url: https://expressjs.com/
+            logo: express-js.svg
+          - item:
+            name: Flask
+            description: Lightweight Python web framework that offers routing and templating basics while leaving other components like databases up to the developer.
+            homepage_url: https://flask.palletsprojects.com/
+            logo: flask.svg
+          - item:
+            name: GraphQL
+            description: Query language and runtime for APIs that lets clients request exactly the data fields they need from a server in a single call.
+            homepage_url: https://graphql.org/
+            logo: graphql.svg
+          - item:
+            name: gRPC
+            description: Open-source remote procedure call framework that uses protocol buffers for efficient, strongly-typed communication between services, often across languages.
+            homepage_url: https://grpc.io/
+            logo: grpc.svg
+          - item:
+            name: JBoss (WildFly)
+            description: Java EE / Jakarta EE application server used to deploy and run enterprise Java applications, handling services like transactions, security, and messaging.
+            homepage_url: https://www.wildfly.org/
+            logo: jboss-wildfly.svg
+          - item:
+            name: JSON Server
+            description: Command-line tool that spins up a full fake REST API from a JSON file, useful for prototyping frontends without a real backend.
+            homepage_url: https://github.com/typicode/json-server
+            logo: json-server.svg
+          - item:
+            name: Laravel
+            description: PHP web application framework that provides tools for routing, ORM, templating, and authentication to build web applications following the MVC pattern.
+            homepage_url: https://laravel.com/
+            logo: laravel.svg
+          - item:
+            name: LINQ
+            description: Language-integrated query feature in .NET that lets developers write set-based queries over collections, databases, and XML directly in C# or VB.NET syntax.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/csharp/linq/
+            logo: linq.svg
+          - item:
+            name: MediatR
+            description: .NET library implementing the mediator pattern, used to decouple in-process request/response handling and event notifications between components.
+            homepage_url: https://github.com/jbogard/MediatR
+            logo: mediatr.svg
+          - item:
+            name: Microsoft Graph API
+            description: Unified REST API and SDK that lets applications access data and services across Microsoft 365, such as Outlook, Teams, and Azure Active Directory.
+            homepage_url: https://learn.microsoft.com/en-us/graph/
+            logo: microsoft-graph-api.svg
+          - item:
+            name: Moshi
+            description: JSON serialization library for Java and Kotlin (commonly used on Android) that converts objects to and from JSON with reflection or generated adapters.
+            homepage_url: https://github.com/square/moshi
+            logo: moshi.svg
+          - item:
+            name: NestJS
+            description: TypeScript-based Node.js framework for building scalable server-side applications, providing a modular architecture inspired by Angular along with dependency injection.
+            homepage_url: https://nestjs.com/
+            logo: nestjs.svg
+          - item:
+            name: NHibernate
+            description: Object-relational mapping framework for .NET that maps classes to relational database tables, handling data persistence and querying.
+            homepage_url: https://nhibernate.info/
+            logo: nhibernate.svg
+          - item:
+            name: Node.js
+            description: JavaScript runtime built on Chrome's V8 engine that enables running JavaScript outside the browser, commonly used to build servers and command-line tools.
+            homepage_url: https://nodejs.org/
+            logo: node-js.svg
+          - item:
+            name: Quarkus
+            description: Java framework optimized for building cloud-native, containerized applications with fast startup times and low memory footprint, often used with Kubernetes.
+            homepage_url: https://quarkus.io/
+            logo: quarkus.svg
+          - item:
+            name: Razor
+            description: Markup syntax used in ASP.NET Core for embedding server-side C# code within HTML to generate dynamic web page views.
+            homepage_url: https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor
+            logo: razor.svg
+          - item:
+            name: Retrofit
+            description: Type-safe HTTP client library for Java and Android that turns REST API endpoints into simple Java interface method calls.
+            homepage_url: https://square.github.io/retrofit/
+            logo: retrofit.svg
+          - item:
+            name: Ruby on Rails
+            description: Web application framework written in Ruby that follows the MVC pattern and convention-over-configuration principles to speed up building database-backed web apps.
+            homepage_url: https://rubyonrails.org/
+            logo: ruby-on-rails.svg
+          - item:
+            name: Socket.IO
+            description: JavaScript library that enables real-time, bidirectional communication between web clients and servers, built on top of WebSockets with fallback support.
+            homepage_url: https://socket.io/
+            logo: socket-io.svg
+          - item:
+            homepage_url: https://spring.io/projects/spring-boot
+            logo: spring-boot.svg
+            name: Spring Boot
+            description: Java framework that simplifies building standalone, production-ready Spring applications by providing auto-configuration and embedded servers, reducing boilerplate setup.
+          - item:
+            name: Spring Data
+            description: Part of the Spring ecosystem that simplifies data access, offering consistent, repository-based abstractions for working with relational and NoSQL databases.
+            homepage_url: https://spring.io/projects/spring-data
+            logo: spring-data.svg
+          - item:
+            name: Spring MVC
+            description: Web framework within Spring for building server-side Java web applications and REST APIs using the model-view-controller pattern.
+            homepage_url: https://docs.spring.io/spring-framework/reference/web/webmvc.html
+            logo: spring-mvc.svg
+          - item:
+            name: Spring WebFlux
+            description: Reactive web framework within Spring for building non-blocking, asynchronous web applications and APIs on top of reactive streams.
+            homepage_url: https://docs.spring.io/spring-framework/reference/web/webflux.html
+            logo: spring-webflux.svg
+          - item:
+            name: Unity Container
+            description: Lightweight dependency injection container for .NET applications that helps manage object creation and lifetime to support loosely coupled designs.
+            homepage_url: https://github.com/unitycontainer/unity
+            logo: unity-container.svg
+          - item:
+            name: Windows Communication Foundation (WCF)
+            description: .NET framework for building service-oriented applications, enabling communication between distributed systems using configurable protocols and bindings.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/framework/wcf/
+            logo: windows-communication-foundation-wcf.svg
+          - item:
+            name: WordPress
+            description: Open-source content management system used to build and manage websites and blogs, extensible through plugins and themes.
+            homepage_url: https://wordpress.org/
+            logo: wordpress.svg
       - subcategory:
-        name: Subcategory 2-2
+        name: Frontend Frameworks
         items:
           - item:
-            homepage_url: https://github.com/dependabot
-            logo: dependabot.png
-            name: Dependabot
+            name: AmCharts
+            description: JavaScript charting and data visualization library used to create interactive charts, graphs, and maps for web applications.
+            homepage_url: https://www.amcharts.com/
+            logo: amcharts.svg
           - item:
-            name: Snyk
-            homepage_url: https://snyk.io/
-            logo: snyk.svg
+            homepage_url: https://angular.dev/
+            logo: angular.svg
+            name: Angular
+            description: TypeScript-based web application framework maintained by Google for building single-page applications with a component-based architecture.
+          - item:
+            name: AngularJS
+            description: Original JavaScript-based front-end framework from Google for building dynamic single-page web applications, predecessor to the rewritten Angular framework.
+            homepage_url: https://angularjs.org/
+            logo: angularjs.svg
+          - item:
+            name: Aurelia
+            description: JavaScript front-end framework for building single-page applications and web components with an emphasis on standards-based, convention-driven development.
+            homepage_url: https://aurelia.io/
+            logo: aurelia.svg
+          - item:
+            name: Axios
+            description: Promise-based HTTP client for JavaScript used in browsers and Node.js to make requests to APIs and handle responses.
+            homepage_url: https://axios-http.com/
+            logo: axios.svg
+          - item:
+            name: Babel
+            description: JavaScript compiler that converts modern ECMAScript syntax into backward-compatible versions so code runs on older browsers and environments.
+            homepage_url: https://babeljs.io/
+            logo: babel.svg
+          - item:
+            name: Blazor
+            description: Web framework from Microsoft that lets developers build interactive web UIs using C# and .NET instead of JavaScript, running on the server or in the browser via WebAssembly.
+            homepage_url: https://learn.microsoft.com/en-us/aspnet/core/blazor/
+            logo: blazor.svg
+          - item:
+            name: Bootstrap
+            description: Front-end CSS framework that provides pre-built components and a responsive grid system for quickly designing web page layouts.
+            homepage_url: https://getbootstrap.com/
+            logo: bootstrap.svg
+          - item:
+            name: D3.js
+            description: JavaScript library for producing dynamic, interactive data visualizations in web browsers by binding data to DOM elements and SVG.
+            homepage_url: https://d3js.org/
+            logo: d3-js.svg
+          - item:
+            name: Docusaurus
+            description: Static site generator built with React designed for creating documentation websites, with support for versioning and Markdown content.
+            homepage_url: https://docusaurus.io/
+            logo: docusaurus.svg
+          - item:
+            name: Electron
+            description: Framework for building cross-platform desktop applications using web technologies like JavaScript, HTML, and CSS, combining Chromium and Node.js.
+            homepage_url: https://www.electronjs.org/
+            logo: electron.svg
+          - item:
+            name: jQuery
+            description: JavaScript library that simplifies DOM manipulation, event handling, and AJAX requests, historically widely used to write cross-browser compatible scripts.
+            homepage_url: https://jquery.com/
+            logo: jquery.svg
+          - item:
+            name: Kendo UI
+            description: Commercial UI component library providing widgets and controls for building web applications, with versions for various JavaScript frameworks.
+            homepage_url: https://www.telerik.com/kendo-ui
+            logo: kendo-ui.svg
+          - item:
+            name: Knockout.js
+            description: JavaScript library that implements the Model-View-ViewModel pattern, enabling automatic UI updates through observable data binding.
+            homepage_url: https://knockoutjs.com/
+            logo: knockout-js.svg
+          - item:
+            name: Moment.js
+            description: JavaScript library for parsing, validating, manipulating, and formatting dates and times. Widely used in older web projects, though now in maintenance mode with lighter alternatives recommended for new code.
+            homepage_url: https://momentjs.com/
+            logo: moment-js.svg
+          - item:
+            name: Next.js
+            description: React framework that adds server-side rendering, static site generation, routing, and API routes on top of React. Used to build production-ready web applications with improved performance and SEO.
+            homepage_url: https://nextjs.org/
+            repo_url: https://github.com/vercel/next.js
+            logo: nextjs-logotype-light-background.svg
+          - item:
+            name: NgRx
+            description: State management library for Angular applications based on reactive programming and the Redux pattern, using RxJS observables to manage application state and side effects in a predictable way.
+            homepage_url: https://ngrx.io/
+            logo: ngrx.svg
+          - item:
+            name: PrimeNG
+            description: UI component library for Angular providing a large collection of ready-made widgets like tables, charts, and forms to speed up building application interfaces.
+            homepage_url: https://primeng.org/
+            logo: primeng.svg
+          - item:
+            homepage_url: https://react.dev/
+            logo: react.svg
+            name: React
+            description: JavaScript library for building user interfaces using a component-based architecture. Widely used for single-page applications and as the foundation for many other frontend frameworks.
+          - item:
+            name: Recharts
+            description: Charting library for React built on top of D3, providing composable components for creating common chart types like line, bar, and pie charts.
+            homepage_url: https://recharts.org/
+            logo: recharts.svg
+          - item:
+            name: Redux
+            description: Predictable state container for JavaScript applications, commonly used with React, that centralizes application state and enforces unidirectional data flow through actions and reducers.
+            homepage_url: https://redux.js.org/
+            logo: redux.svg
+          - item:
+            name: Remix
+            description: Full-stack web framework built on React that focuses on server-side rendering, nested routing, and data loading, aiming to improve performance and user experience for web applications.
+            homepage_url: https://remix.run/
+            logo: remix.svg
+          - item:
+            name: RxJS
+            description: Library for reactive programming in JavaScript using observables, enabling composition of asynchronous and event-based programs through operators like map, filter, and merge.
+            homepage_url: https://rxjs.dev/
+            logo: rxjs.svg
+          - item:
+            name: Tailwind CSS
+            description: Utility-first CSS framework that provides low-level classes for styling elements directly in markup, allowing developers to build custom designs without writing separate CSS files.
+            homepage_url: https://tailwindcss.com/
+            logo: tailwind-css.svg
+          - item:
+            name: Telerik
+            description: Suite of UI component libraries and developer tools from Progress Software for building web, desktop, and mobile applications across platforms like .NET, React, and Angular.
+            homepage_url: https://www.telerik.com/
+            logo: telerik.svg
+          - item:
+            name: Three.js
+            description: JavaScript library that simplifies creating and rendering 3D graphics in web browsers using WebGL, commonly used for visualizations, games, and interactive experiences.
+            homepage_url: https://threejs.org/
+            logo: three-js.svg
+          - item:
+            name: TinyMCE
+            description: Web-based rich text editor that can be embedded into applications to provide WYSIWYG content editing capabilities, similar to a word processor, within a browser.
+            homepage_url: https://www.tiny.cloud/
+            logo: tinymce.svg
+          - item:
+            name: Vite
+            description: Frontend build tool and development server that provides fast hot module replacement and optimized bundling, commonly used with frameworks like Vue and React.
+            homepage_url: https://vitejs.dev/
+            logo: vite.svg
+          - item:
+            name: Vue.js
+            description: Progressive JavaScript framework for building user interfaces and single-page applications, known for its approachable learning curve and component-based architecture.
+            homepage_url: https://vuejs.org/
+            repo_url: https://github.com/vuejs/core
+            logo: vuejs.svg
+          - item:
+            name: Windows Forms
+            description: UI framework in .NET for building desktop applications on Windows using a drag-and-drop designer and event-driven programming model.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/
+            logo: windows-forms.svg
+          - item:
+            name: Windows Presentation Foundation
+            description: UI framework in .NET for building desktop applications on Windows, using XAML for declarative interface design and supporting rich graphics, data binding, and styling.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/
+            logo: windows-presentation-foundation.svg
       - subcategory:
-        name: Subcategory 2-3
+        name: Mobile Frameworks
         items:
           - item:
-            name: Application Insights
-            homepage_url: https://azure.microsoft.com/en-us/products/monitor
-            logo: 00012-icon-service-Application-Insights.svg
+            name: Android Studio
+            description: Official integrated development environment for building Android applications, providing code editing, debugging, emulation, and build tools based on IntelliJ IDEA.
+            homepage_url: https://developer.android.com/studio
+            logo: android-studio.svg
           - item:
-            name: Azure Log Analytics
-            homepage_url: https://azure.microsoft.com/en-us/products/monitor
-            logo: 00009-icon-service-Log-Analytics-Workspaces.svg
+            name: AVPlayer
+            description: Apple framework class used to play and control audio and video media within iOS, macOS, and other Apple platform applications.
+            homepage_url: https://developer.apple.com/documentation/avfoundation/avplayer
+            logo: avplayer.svg
           - item:
-            name: Dynatrace
-            homepage_url: https://www.dynatrace.com/
-            logo: dynatrace.svg
+            name: CocoaPods
+            description: Dependency manager for Swift and Objective-C projects that automates downloading, integrating, and managing third-party libraries in Xcode projects.
+            homepage_url: https://cocoapods.org/
+            logo: cocoapods.svg
           - item:
-            name: ElasticSearch
-            homepage_url: https://www.elastic.co/
-            repo_url: https://github.com/elastic/elasticsearch
-            logo: elastic.svg
+            name: Cocos2d
+            description: Open-source framework for building 2D games and graphical applications, offering tools for rendering, physics, and animation across mobile and desktop platforms.
+            homepage_url: https://www.cocos.com/
+            logo: cocos2d.svg
           - item:
-            name: Grafana
-            homepage_url: https://grafana.com/
-            repo_url: https://github.com/grafana/grafana
-            logo: grafana.svg
+            name: Combine
+            description: Apple framework for handling asynchronous and event-driven code using a declarative publisher/subscriber model, commonly paired with SwiftUI apps.
+            homepage_url: https://developer.apple.com/documentation/combine
+            logo: combine.svg
           - item:
-            name: Jaeger
-            homepage_url: https://www.jaegertracing.io/
-            repo_url: https://github.com/jaegertracing/jaeger
-            logo: jaeger.svg
+            name: Flutter
+            description: Open-source UI toolkit from Google for building natively compiled applications for mobile, web, and desktop from a single Dart codebase.
+            homepage_url: https://flutter.dev/
+            logo: flutter.svg
           - item:
-            name: Logstash
-            homepage_url: https://www.elastic.co/logstash
-            repo_url: https://github.com/elastic/logstash
-            logo: logstash.svg
+            name: Ionic
+            description: Open-source framework for building cross-platform mobile and desktop apps using standard web technologies like HTML, CSS, and JavaScript, wrapped in native containers.
+            homepage_url: https://ionicframework.com/
+            logo: ionic.svg
           - item:
-            name: New Relic
-            homepage_url: https://newrelic.com/
-            logo: newrelic.svg
+            name: iOS
+            description: Apple's mobile operating system that powers iPhone devices, providing the platform and APIs on which mobile apps run.
+            homepage_url: https://developer.apple.com/ios/
+            logo: ios.svg
           - item:
-            name: Prometheus
-            homepage_url: https://prometheus.io/
-            repo_url: https://github.com/prometheus/prometheus
-            logo: prometheus.svg
+            name: React Native
+            description: Framework for building cross-platform mobile applications using JavaScript and React, rendering to native UI components on iOS and Android.
+            homepage_url: https://reactnative.dev/
+            logo: react-native.svg
           - item:
-            name: Splunk
-            homepage_url: https://www.splunk.com/
-            logo: splunk.svg
+            name: RxSwift
+            description: Reactive programming library for Swift that lets developers compose asynchronous and event-based code using observable sequences, based on the ReactiveX model.
+            homepage_url: https://github.com/ReactiveX/RxSwift
+            logo: rxswift.svg
+          - item:
+            name: Swift Charts
+            description: Apple framework for building data visualizations and charts declaratively within SwiftUI applications.
+            homepage_url: https://developer.apple.com/documentation/charts
+            logo: swift-charts.svg
+          - item:
+            name: SwiftUI
+            description: Apple's declarative framework for building user interfaces across iOS, macOS, watchOS, and tvOS using Swift.
+            homepage_url: https://developer.apple.com/xcode/swiftui/
+            logo: swiftui.svg
+          - item:
+            name: UIKit
+            description: Apple's framework for building user interfaces on iOS and related platforms using an imperative, object-oriented approach, predating SwiftUI.
+            homepage_url: https://developer.apple.com/documentation/uikit
+            logo: uikit.svg
+          - item:
+            name: Universal Windows Platform
+            description: Microsoft platform for developing applications that run across multiple Windows device types, including PCs, tablets, and Xbox, using a common API set.
+            homepage_url: https://learn.microsoft.com/en-us/windows/uwp/
+            logo: universal-windows-platform.svg
+          - item:
+            name: Xamarin
+            description: Microsoft framework for building cross-platform mobile applications using C# and .NET, compiling to native code for iOS and Android.
+            homepage_url: https://dotnet.microsoft.com/en-us/apps/xamarin
+            logo: xamarin.svg
+          - item:
+            name: Xamarin.Forms
+            description: UI toolkit built on top of Xamarin that lets developers share a single C# codebase for user interfaces across iOS, Android, and Windows.
+            homepage_url: https://dotnet.microsoft.com/en-us/apps/xamarin/xamarin-forms
+            logo: xamarin-forms.svg
   - category:
-    name: Category 3
+    name: Databases & Data Stores
     subcategories:
       - subcategory:
-        name: Subcategory 2-0
+        name: Relational
         items:
           - item:
-            name: Apache Airflow
-            homepage_url: https://airflow.apache.org/
-            repo_url: https://github.com/apache/airflow
-            logo: apache-airflow.svg
+            name: Amazon RDS
+            description: Managed relational database service on AWS that automates provisioning, patching, and backups for engines such as MySQL, PostgreSQL, and SQL Server.
+            homepage_url: https://aws.amazon.com/rds/
+            logo: amazon-rds.svg
           - item:
-            name: dbt
-            homepage_url: https://www.getdbt.com/product/dbt
-            repo_url: https://github.com/dbt-labs/dbt-core
-            logo: dbt-logo-full.svg
+            name: Amazon Redshift
+            description: Fully managed cloud data warehouse service on AWS designed for large-scale data analytics and complex queries.
+            homepage_url: https://aws.amazon.com/redshift/
+            logo: amazon-redshift.svg
           - item:
-            name: Flyway
-            homepage_url: https://flywaydb.org/
-            repo_url: https://github.com/flyway/flyway
-            logo: flyway.svg
+            name: Azure SQL Database
+            description: Managed relational database service on Microsoft Azure based on SQL Server, handling maintenance, scaling, and backups automatically.
+            homepage_url: https://azure.microsoft.com/en-us/products/azure-sql/database/
+            logo: azure-sql-database.svg
           - item:
-            name: Liquibase
-            homepage_url: https://www.liquibase.com/
-            repo_url: https://github.com/liquibase/liquibase
-            logo: liquibase.svg
-      - subcategory:
-        name: Subcategory 2-1
-        items:
+            name: Google BigQuery
+            description: Serverless, fully managed data warehouse on Google Cloud used for running large-scale SQL analytics over big datasets.
+            homepage_url: https://cloud.google.com/bigquery
+            logo: google-bigquery.svg
+          - item:
+            name: H2 Database
+            description: Lightweight, open-source relational database written in Java, often used for embedded applications and automated testing due to its small footprint.
+            homepage_url: https://www.h2database.com/
+            logo: h2-database.svg
+          - item:
+            name: IBM Db2
+            description: Relational database management system from IBM used for enterprise data storage, transaction processing, and analytics.
+            homepage_url: https://www.ibm.com/products/db2
+            logo: ibm-db2.svg
+          - item:
+            name: IBM Db2 for LUW
+            description: Edition of IBM's Db2 database designed to run on Linux, Unix, and Windows operating systems.
+            homepage_url: https://www.ibm.com/products/db2
+            logo: ibm-db2-for-luw.svg
+          - item:
+            name: JDBC
+            description: Java API that provides a standard way for applications to connect to and execute queries against relational databases.
+            homepage_url: https://docs.oracle.com/javase/tutorial/jdbc/overview/index.html
+            logo: jdbc.svg
           - item:
             name: MariaDB
+            description: Open-source relational database management system originally forked from MySQL, used for structured data storage and SQL-based querying.
             homepage_url: https://mariadb.com/
             repo_url: https://github.com/MariaDB/server
             logo: mariadb.svg
           - item:
+            name: Microsoft Access
+            description: Desktop database application from Microsoft that pairs a relational database engine with graphical tools for building small business data applications.
+            homepage_url: https://www.microsoft.com/en-us/microsoft-365/access
+            logo: microsoft-access.svg
+          - item:
             name: Microsoft SQL Server
+            description: Relational database management system from Microsoft used for enterprise transaction processing, data storage, and business intelligence workloads.
             homepage_url: https://www.microsoft.com/en-us/sql-server
             logo: microsoft-sql-server.svg
           - item:
             name: MySQL
+            description: Open-source relational database management system widely used to store and query structured data in web and enterprise applications.
             homepage_url: https://www.oracle.com/mysql/
             repo_url: https://github.com/mysql/mysql-server
             logo: my-sql.svg
           - item:
             name: Oracle Database
+            description: Enterprise relational database management system known for handling large-scale transactional and analytical workloads with high reliability.
             homepage_url: https://www.oracle.com/database/
             logo: oracle.svg
           - item:
             name: PostgreSQL
+            description: Open-source object-relational database system known for standards compliance, extensibility, and support for advanced data types and indexing.
             homepage_url: https://www.postgresql.org/
             repo_url: https://github.com/postgres/postgres
             logo: postgre-sql.svg
+          - item:
+            name: Snowflake
+            description: Cloud-based data warehousing platform that separates storage and compute resources, used for analytics and large-scale data processing.
+            homepage_url: https://www.snowflake.com/
+            logo: snowflake.svg
+          - item:
+            name: SQLite
+            description: Lightweight, serverless relational database engine embedded directly into applications, commonly used for local or mobile data storage.
+            homepage_url: https://www.sqlite.org/
+            logo: sqlite.svg
+          - item:
+            name: Supabase
+            description: Open-source backend-as-a-service platform built on PostgreSQL that provides authentication, real-time data sync, and auto-generated APIs for app development.
+            homepage_url: https://supabase.com/
+            logo: supabase.svg
+          - item:
+            name: Sybase (SAP ASE)
+            description: Relational database management system originally developed by Sybase and now owned by SAP, used for transaction processing in enterprise systems.
+            homepage_url: https://www.sap.com/products/technology-platform/sybase-ase.html
+            logo: sybase-sap-ase.svg
+          - item:
+            name: Vertica
+            description: Columnar analytical database management system designed for fast query performance on large-scale data warehousing and analytics workloads.
+            homepage_url: https://www.vertica.com/
+            logo: vertica.svg
       - subcategory:
-        name: Subcategory 2-2
+        name: Document
         items:
           - item:
-            name: Cassandra
-            homepage_url: https://cassandra.apache.org/
-            repo_url: https://github.com/apache/cassandra
-            logo: cassandra.svg
+            name: Azure Cosmos DB
+            description: Globally distributed, multi-model database service from Microsoft that supports multiple data APIs and offers low-latency, scalable access.
+            homepage_url: https://azure.microsoft.com/en-us/products/cosmos-db
+            logo: azure-cosmos-db.svg
+          - item:
+            name: Core Data
+            description: Apple framework for managing object graphs and persisting application data on iOS and macOS, providing an abstraction over underlying storage.
+            homepage_url: https://developer.apple.com/documentation/coredata
+            logo: core-data.svg
           - item:
             name: Couchbase
+            description: Distributed NoSQL database combining document store and key-value capabilities, designed for high performance and horizontal scalability.
             homepage_url: https://www.couchbase.com/
             repo_url: https://github.com/couchbase/manifest
             logo: couchbase.svg
           - item:
-            name: Databricks
-            homepage_url: https://www.databricks.com/
-            logo: databricks.svg
-          - item:
-            name: Kafka
-            homepage_url: https://kafka.apache.org/
-            repo_url: https://github.com/apache/kafka
-            logo: kafka.svg
+            name: IndexedDB
+            description: Low-level browser API for storing and indexing structured data on the client side, enabling offline and performant web applications.
+            homepage_url: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+            logo: indexeddb.svg
           - item:
             name: MongoDB
+            description: Document-oriented NoSQL database that stores data as JSON-like documents, used for flexible-schema application development at scale.
             homepage_url: https://www.mongodb.com/
             repo_url: https://github.com/mongodb/mongo
             logo: mongo-db.svg
           - item:
+            name: Realm
+            description: Object-oriented mobile database framework for iOS and Android apps, often used as a local data store alternative to SQLite or Core Data.
+            homepage_url: https://realm.io/
+            logo: realm.svg
+      - subcategory:
+        name: Key-Value & In-Memory
+        items:
+          - item:
+            name: Amazon DynamoDB
+            description: Fully managed NoSQL key-value and document database service on AWS, built for high scalability and low-latency access at large scale.
+            homepage_url: https://aws.amazon.com/dynamodb/
+            logo: amazon-dynamodb.svg
+          - item:
+            name: Azure Table Storage
+            description: NoSQL key-value storage service in Azure used for storing large volumes of structured, non-relational data cost-effectively.
+            homepage_url: https://azure.microsoft.com/en-us/products/storage/tables/
+            logo: azure-table-storage.svg
+          - item:
             name: Redis
+            description: In-memory key-value data store used for caching, session storage, and real-time data structures, often serving as a fast layer in front of primary databases.
             homepage_url: https://redis.io/
             repo_url: https://github.com/redis/redis
             logo: redis.svg
+      - subcategory:
+        name: Wide-Column
+        items:
           - item:
-            name: Snowflake
-            homepage_url: https://www.snowflake.com/
-            logo: snowflake.svg
+            name: Cassandra
+            description: Distributed NoSQL database designed to manage large amounts of data across many commodity servers while providing high availability with no single point of failure.
+            homepage_url: https://cassandra.apache.org/
+            repo_url: https://github.com/apache/cassandra
+            logo: cassandra.svg
+      - subcategory:
+        name: Search
+        items:
+          - item:
+            name: Azure AI Search
+            description: Cloud search service that indexes content and provides full-text, vector, and AI-enriched search capabilities for building search experiences over enterprise data.
+            homepage_url: https://azure.microsoft.com/en-us/products/ai-services/ai-search
+            logo: azure-ai-search.svg
+          - item:
+            name: Elasticsearch
+            description: Distributed search and analytics engine built on Lucene, commonly used for full-text search, log analysis, and real-time data exploration.
+            homepage_url: https://www.elastic.co/
+            repo_url: https://github.com/elastic/elasticsearch
+            logo: elastic.svg
+      - subcategory:
+        name: Schema Migration
+        items:
+          - item:
+            name: Flyway
+            description: Database migration tool that manages and version-controls schema changes using plain SQL or Java-based migration scripts.
+            homepage_url: https://flywaydb.org/
+            repo_url: https://github.com/flyway/flyway
+            logo: flyway.svg
+          - item:
+            name: Liquibase
+            description: Database schema change management tool that tracks, versions, and applies database changes defined in XML, YAML, JSON, or SQL changelogs.
+            homepage_url: https://www.liquibase.com/
+            repo_url: https://github.com/liquibase/liquibase
+            logo: liquibase.svg
+  - category:
+    name: Data Engineering
+    subcategories:
+      - subcategory:
+        name: Workflow Orchestration
+        items:
+          - item:
+            name: Apache Airflow
+            description: Workflow orchestration platform for authoring, scheduling, and monitoring data pipelines defined as directed acyclic graphs (DAGs).
+            homepage_url: https://airflow.apache.org/
+            repo_url: https://github.com/apache/airflow
+            logo: apache-airflow.svg
+          - item:
+            name: AutoSys
+            description: Enterprise workload automation tool used to schedule, monitor, and manage batch jobs and processes across distributed systems.
+            homepage_url: https://www.broadcom.com/products/software/workload-automation/autosys-workload-automation
+            logo: autosys.svg
+          - item:
+            name: AWS Step Functions
+            description: Serverless orchestration service that coordinates multiple AWS services into visual workflows using state machines.
+            homepage_url: https://aws.amazon.com/step-functions/
+            logo: aws-step-functions.svg
+          - item:
+            name: Azure Data Factory
+            description: Cloud-based data integration service used to create, schedule, and orchestrate ETL/ELT pipelines across various data sources.
+            homepage_url: https://azure.microsoft.com/en-us/products/data-factory
+            logo: azure-data-factory.svg
+          - item:
+            name: Hangfire
+            description: Library for .NET applications that enables scheduling and processing of background jobs without requiring a separate Windows service or external process.
+            homepage_url: https://www.hangfire.io/
+            logo: hangfire.svg
+          - item:
+            name: n8n
+            description: Open-source workflow automation tool that lets users connect applications and services through a visual, node-based editor.
+            homepage_url: https://n8n.io/
+            logo: n8n.svg
+      - subcategory:
+        name: Streaming & Messaging
+        items:
+          - item:
+            name: Apache ActiveMQ
+            description: Open-source message broker that supports messaging protocols such as JMS, enabling reliable asynchronous communication between distributed applications.
+            homepage_url: https://activemq.apache.org/
+            logo: apache-activemq.svg
+          - item:
+            name: Apache Kafka
+            description: Distributed event streaming platform used to build real-time data pipelines and streaming applications that process high volumes of events.
+            homepage_url: https://kafka.apache.org/
+            repo_url: https://github.com/apache/kafka
+            logo: kafka.svg
+          - item:
+            name: Azure Event Grid
+            description: Fully managed event routing service that delivers events from various sources to subscribers, enabling event-driven architectures.
+            homepage_url: https://azure.microsoft.com/en-us/products/event-grid/
+            logo: azure-event-grid.svg
+          - item:
+            name: Azure Event Hubs
+            description: Big data streaming platform and event ingestion service capable of receiving and processing large volumes of events in real time.
+            homepage_url: https://azure.microsoft.com/en-us/products/event-hubs/
+            logo: azure-event-hubs.svg
+          - item:
+            name: Azure Service Bus
+            description: Fully managed enterprise message broker offering queues and publish-subscribe topics to decouple and connect distributed applications.
+            homepage_url: https://azure.microsoft.com/en-us/products/service-bus
+            logo: azure-service-bus.svg
+          - item:
+            name: Microsoft BizTalk Server
+            description: Integration server platform used to connect disparate systems, automate business processes, and enable business-to-business communication.
+            homepage_url: https://learn.microsoft.com/en-us/biztalk/core/
+            logo: microsoft-biztalk-server.svg
+          - item:
+            name: RabbitMQ
+            description: Open-source message broker that implements protocols like AMQP to enable reliable messaging between distributed applications.
+            homepage_url: https://www.rabbitmq.com/
+            logo: rabbitmq.svg
+      - subcategory:
+        name: Data Processing
+        items:
+          - item:
+            name: Alteryx
+            description: Data analytics platform providing visual workflow tools for data blending, preparation, and advanced analytics.
+            homepage_url: https://www.alteryx.com/
+            logo: alteryx.svg
+          - item:
+            name: Apache Avro
+            description: Data serialization framework that encodes data in a compact binary format along with its schema, commonly used for exchanging data between systems in the Hadoop ecosystem.
+            homepage_url: https://avro.apache.org/
+            logo: apache-avro.svg
+          - item:
+            name: Apache Hadoop
+            description: Open-source framework for distributed storage and processing of large datasets across clusters of commodity hardware, built around HDFS and the MapReduce processing model.
+            homepage_url: https://hadoop.apache.org/
+            logo: apache-hadoop.svg
+          - item:
+            name: Apache Parquet
+            description: Columnar storage file format optimized for efficient compression and query performance, widely used for analytical workloads in big data processing engines.
+            homepage_url: https://parquet.apache.org/
+            logo: apache-parquet.svg
+          - item:
+            name: Apache Spark
+            description: Distributed computing engine for processing large-scale data in parallel across clusters, supporting batch processing, streaming, machine learning, and SQL workloads.
+            homepage_url: https://spark.apache.org/
+            logo: apache-spark.svg
+          - item:
+            name: Azure Synapse Analytics
+            description: Microsoft cloud service that combines data warehousing, big data analytics, and data integration into a single platform for querying and analyzing large datasets.
+            homepage_url: https://azure.microsoft.com/en-us/products/synapse-analytics/
+            logo: azure-synapse-analytics.svg
+          - item:
+            name: Databricks
+            description: Cloud-based platform built around Apache Spark that provides tools for data engineering, data science, and machine learning workflows, including notebooks and managed clusters.
+            homepage_url: https://www.databricks.com/
+            logo: databricks.svg
+          - item:
+            name: Dataform
+            description: Google Cloud service for defining, testing, and orchestrating SQL-based data transformations within data warehouses, supporting version control and dependency management.
+            homepage_url: https://cloud.google.com/dataform
+            logo: dataform.svg
+          - item:
+            name: dbt
+            description: Command-line and cloud tool that lets analysts and engineers transform data in a warehouse using SQL, managing dependencies, testing, and documentation for transformation pipelines.
+            homepage_url: https://www.getdbt.com/product/dbt
+            repo_url: https://github.com/dbt-labs/dbt-core
+            logo: dbt-logo-full.svg
+          - item:
+            name: Google Cloud Dataprep
+            description: Cloud-based service for visually exploring, cleaning, and preparing structured and unstructured data for analysis or downstream processing.
+            homepage_url: https://cloud.google.com/dataprep
+            logo: google-cloud-dataprep.svg
+          - item:
+            name: IBM InfoSphere DataStage
+            description: Enterprise ETL tool used to design and run data integration jobs that extract, transform, and load data across various sources and targets.
+            homepage_url: https://www.ibm.com/products/infosphere-datastage
+            logo: ibm-infosphere-datastage.svg
+          - item:
+            name: Informatica PowerCenter
+            description: Enterprise data integration tool used to build ETL pipelines that extract, transform, and load data between diverse systems and databases.
+            homepage_url: https://www.informatica.com/
+            logo: informatica-powercenter.svg
+          - item:
+            name: LookML
+            description: Modeling language used in Looker to define data relationships, metrics, and business logic that get translated into SQL queries for analytics.
+            homepage_url: https://cloud.google.com/looker/docs/what-is-lookml
+            logo: lookml.svg
+          - item:
+            name: Pandas
+            description: Python library providing data structures like DataFrames for manipulating, cleaning, and analyzing tabular and time-series data.
+            homepage_url: https://pandas.pydata.org/
+            logo: pandas.svg
+          - item:
+            name: Presto
+            description: Distributed SQL query engine designed to run interactive analytic queries against data stored in various sources, including large-scale data lakes.
+            homepage_url: https://prestodb.io/
+            logo: presto.svg
+          - item:
+            name: PySpark
+            description: Python API for Apache Spark that allows developers to write distributed data processing and analytics jobs using Python instead of Scala or Java.
+            homepage_url: https://spark.apache.org/docs/latest/api/python/
+            logo: pyspark.svg
+          - item:
+            name: SAP BusinessObjects
+            description: Business intelligence platform offering reporting, dashboarding, and ad hoc query tools for analyzing enterprise data.
+            homepage_url: https://www.sap.com/products/technology-platform/bi-platform.html
+            logo: sap-businessobjects.svg
+          - item:
+            name: Seaborn
+            description: Python data visualization library built on top of matplotlib that provides higher-level functions for creating statistical charts and graphs.
+            homepage_url: https://seaborn.pydata.org/
+            logo: seaborn.svg
+          - item:
+            name: Spark SQL
+            description: Module within Apache Spark that enables querying structured and semi-structured data using SQL syntax alongside Spark's distributed processing capabilities.
+            homepage_url: https://spark.apache.org/sql/
+            logo: spark-sql.svg
+          - item:
+            name: SQL Server Integration Services
+            description: Microsoft ETL and data integration tool bundled with SQL Server, used to build workflows for extracting, transforming, and loading data between systems.
+            homepage_url: https://learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services
+            logo: sql-server-integration-services.svg
+  - category:
+    name: DevOps & CI/CD
+    subcategories:
+      - subcategory:
+        name: CI/CD Pipelines
+        items:
+          - item:
+            name: Apache Ant
+            description: Java-based build automation tool that uses XML configuration files to define tasks for compiling, testing, and packaging software projects.
+            homepage_url: https://ant.apache.org/
+            logo: apache-ant.svg
+          - item:
+            name: Azure DevOps
+            description: Microsoft suite of cloud services for software development teams, bundling source control, CI/CD pipelines, work item tracking, and artifact management.
+            homepage_url: https://azure.microsoft.com/en-us/products/devops
+            logo: azure-devops.svg
+          - item:
+            name: Azure Pipelines
+            description: CI/CD service within Azure DevOps that automates building, testing, and deploying applications across multiple platforms and languages.
+            homepage_url: https://azure.microsoft.com/en-us/services/devops/pipelines/
+            logo: azure-pipelines.svg
+          - item:
+            name: Bitbucket
+            description: Git repository hosting platform from Atlassian that supports code collaboration, pull requests, and built-in CI/CD pipelines, often paired with Jira.
+            homepage_url: https://bitbucket.org/
+            logo: bitbucket.svg
+          - item:
+            name: BrowserStack
+            description: Cloud-based platform that lets teams test websites and mobile apps on real browsers and devices without maintaining local device labs.
+            homepage_url: https://www.browserstack.com/
+            logo: browserstack.svg
+          - item:
+            name: CloudBees
+            description: Company offering enterprise DevOps and software delivery automation products, including managed Jenkins and CI/CD platforms for large organizations.
+            homepage_url: https://www.cloudbees.com/
+            logo: cloudbees.svg
+          - item:
+            name: Concourse
+            description: Open-source continuous integration and delivery system that models workflows as pipelines of containerized tasks and resources.
+            homepage_url: https://concourse-ci.org/
+            repo_url: https://github.com/concourse/concourse
+            logo: concourse.svg
+          - item:
+            name: Fastlane
+            description: Open-source toolset for automating the build, testing, and release process of iOS and Android mobile applications.
+            homepage_url: https://fastlane.tools/
+            logo: fastlane.svg
+          - item:
+            name: Git
+            description: Distributed version control system used to track changes in source code and coordinate collaborative software development across teams.
+            homepage_url: https://git-scm.com/
+            logo: git.svg
+          - item:
+            name: GitHub
+            description: Web-based hosting service for Git repositories that provides tools for code collaboration, pull requests, issue tracking, and project management.
+            homepage_url: https://github.com/
+            logo: github.svg
+          - item:
+            name: GitHub Actions
+            description: CI/CD feature built into GitHub that lets teams define automated workflows for building, testing, and deploying code triggered by repository events.
+            homepage_url: https://github.com/features/actions
+            logo: github-actions.svg
+          - item:
+            name: GitLab
+            description: Web-based DevOps platform combining Git repository hosting with issue tracking, CI/CD, and project management in a single application.
+            homepage_url: https://gitlab.com/
+            logo: gitlab.svg
+          - item:
+            name: GitLab CI/CD
+            description: Built-in continuous integration and deployment feature of GitLab that automates pipelines for building, testing, and releasing code.
+            homepage_url: https://about.gitlab.com/topics/ci-cd/
+            logo: gitlab-ci-cd.svg
+          - item:
+            name: GoCD
+            description: Open-source continuous delivery server designed for modeling complex build and deployment pipelines with dependency tracking and visualization.
+            homepage_url: https://www.gocd.org/
+            repo_url: https://github.com/gocd/gocd
+            logo: gocd.svg
+          - item:
+            name: Gulp
+            description: JavaScript-based task runner used to automate repetitive front-end development tasks such as minification, compilation, and file watching.
+            homepage_url: https://gulpjs.com/
+            logo: gulp.svg
+          - item:
+            name: Jenkins
+            description: Open-source automation server used to build continuous integration and delivery pipelines, extensible through a large plugin ecosystem.
+            homepage_url: https://jenkins.io/
+            repo_url: https://github.com/jenkinsci/jenkins
+            logo: jenkins.svg
+          - item:
+            name: JFrog Artifactory
+            description: Universal binary repository manager for storing, versioning, and distributing build artifacts and dependencies across many package formats.
+            homepage_url: https://jfrog.com/artifactory/
+            logo: jfrog-artifactory.svg
+          - item:
+            name: Make
+            description: Build automation tool that reads Makefiles describing dependencies between files to compile and link programs efficiently.
+            homepage_url: https://www.gnu.org/software/make/
+            logo: make.svg
+          - item:
+            name: Newman
+            description: Command-line tool for running and automating Postman API test collections, often used in CI pipelines for API testing.
+            homepage_url: https://github.com/postmanlabs/newman
+            logo: newman.svg
+          - item:
+            name: Octopus Deploy
+            description: Deployment automation tool that manages application releases and orchestrates deployments across multiple environments and servers.
+            homepage_url: https://octopus.com/
+            logo: octopus-deploy.svg
+          - item:
+            name: Team Foundation Server
+            description: Microsoft's on-premises application lifecycle management platform providing source control, build automation, and work item tracking, later rebranded as Azure DevOps Server.
+            homepage_url: https://azure.microsoft.com/en-us/products/devops/server/
+            logo: team-foundation-server.svg
+          - item:
+            name: TeamCity
+            description: CI/CD server from JetBrains used to automate building, testing, and deploying software projects.
+            homepage_url: https://www.jetbrains.com/teamcity/
+            logo: teamcity.svg
+          - item:
+            name: Visual Studio App Center
+            description: Cloud-based service from Microsoft for building, testing, distributing, and monitoring mobile and desktop applications throughout their lifecycle.
+            homepage_url: https://appcenter.ms/
+            logo: visual-studio-app-center.svg
+      - subcategory:
+        name: Infrastructure as Code
+        items:
+          - item:
+            name: AWS CDK
+            description: Framework that lets developers define cloud infrastructure using familiar programming languages, which is then synthesized into CloudFormation templates for deployment.
+            homepage_url: https://aws.amazon.com/cdk/
+            logo: aws-cdk.svg
+          - item:
+            name: AWS CloudFormation
+            description: AWS service for provisioning and managing cloud resources using declarative JSON or YAML templates, enabling infrastructure as code.
+            homepage_url: https://aws.amazon.com/cloudformation/
+            logo: aws-cloudformation.svg
+          - item:
+            name: Azure Resource Manager Templates
+            description: JSON-based declarative templates used to define and deploy Azure resources in a consistent, repeatable way.
+            homepage_url: https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+            logo: azure-resource-manager-templates.svg
+          - item:
+            name: Bicep
+            description: Domain-specific language for deploying Azure resources declaratively, offering simpler syntax than raw ARM JSON templates while compiling down to them.
+            homepage_url: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview
+            logo: bicep.svg
+          - item:
+            name: Packer
+            description: Tool for creating identical machine images for multiple platforms (cloud, virtualization, containers) from a single source configuration.
+            homepage_url: https://www.packer.io/
+            logo: packer.svg
+          - item:
+            name: Pulumi
+            description: Infrastructure as code platform that lets teams define and manage cloud resources using general-purpose programming languages instead of a dedicated DSL.
+            homepage_url: https://www.pulumi.com/
+            logo: pulumi.svg
+          - item:
+            name: Terraform
+            description: Infrastructure as code tool that uses a declarative configuration language to provision and manage resources across many cloud and on-premises providers.
+            homepage_url: https://www.terraform.io/
+            repo_url: https://github.com/hashicorp/terraform
+            logo: terraform.svg
+      - subcategory:
+        name: Configuration Management
+        items:
+          - item:
+            name: Ansible
+            description: Agentless automation tool that uses YAML-based playbooks to handle configuration management, application deployment, and orchestration tasks.
+            homepage_url: https://www.ansible.com/
+            logo: ansible.svg
+          - item:
+            name: Puppet
+            description: Configuration management tool that uses a declarative language to automate the provisioning, configuration, and maintenance of infrastructure at scale.
+            homepage_url: https://puppet.com/
+            repo_url: https://github.com/puppetlabs/puppet
+            logo: puppet.svg
+      - subcategory:
+        name: Containers & Orchestration
+        items:
+          - item:
+            name: Amazon ECS
+            description: AWS container orchestration service for deploying, managing, and scaling Docker containers without needing to manage the underlying cluster software.
+            homepage_url: https://aws.amazon.com/ecs/
+            logo: amazon-ecs.svg
+          - item:
+            name: Amazon EKS
+            description: Managed service for running Kubernetes clusters on AWS without needing to install and operate the Kubernetes control plane.
+            homepage_url: https://aws.amazon.com/eks/
+            logo: amazon-eks.svg
+          - item:
+            name: Azure Container Apps
+            description: Serverless hosting service on Azure for running containerized applications and microservices without managing underlying infrastructure or orchestration directly.
+            homepage_url: https://azure.microsoft.com/en-us/products/container-apps/
+            logo: azure-container-apps.svg
+          - item:
+            name: Docker
+            description: Platform for building, packaging, and running applications in lightweight, portable containers that bundle code and dependencies together.
+            homepage_url: https://www.docker.com/
+            logo: docker.svg
+          - item:
+            name: Docker Compose
+            description: Tool for defining and running multi-container Docker applications using a single YAML configuration file to specify services, networks, and volumes.
+            homepage_url: https://docs.docker.com/compose/
+            logo: docker-compose.svg
+          - item:
+            name: Helm
+            description: Package manager for Kubernetes that uses charts to define, install, and upgrade complex applications and their dependencies.
+            homepage_url: https://helm.sh/
+            logo: helm.svg
+          - item:
+            name: Kubernetes
+            description: Open-source platform for automating the deployment, scaling, and management of containerized applications across clusters of machines.
+            homepage_url: https://kubernetes.io/
+            logo: kubernetes.svg
+          - item:
+            name: Microsoft Hyper-V
+            description: Native hypervisor built into Windows for creating and managing virtual machines, enabling multiple operating systems to run on a single physical host.
+            homepage_url: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview
+            logo: microsoft-hyper-v.svg
+          - item:
+            name: OpenShift
+            description: Enterprise Kubernetes platform from Red Hat that adds developer and operational tooling on top of Kubernetes for building and deploying containerized applications.
+            homepage_url: https://www.openshift.com/
+            logo: openshift.svg
+  - category:
+    name: Observability
+    subcategories:
+      - subcategory:
+        name: APM
+        items:
+          - item:
+            name: Application Insights
+            description: Application performance monitoring feature within Azure Monitor that tracks application usage, performance metrics, and diagnoses issues in live applications.
+            homepage_url: https://azure.microsoft.com/en-us/products/monitor
+            logo: 00012-icon-service-Application-Insights.svg
+          - item:
+            name: Dynatrace
+            description: Software intelligence platform that provides application performance monitoring, infrastructure monitoring, and observability using AI-driven analysis of cloud and hybrid environments.
+            homepage_url: https://www.dynatrace.com/
+            logo: dynatrace.svg
+          - item:
+            name: Jaeger
+            description: Open-source distributed tracing system used to monitor and troubleshoot transactions across microservices-based applications.
+            homepage_url: https://www.jaegertracing.io/
+            repo_url: https://github.com/jaegertracing/jaeger
+            logo: jaeger.svg
+          - item:
+            name: New Relic
+            description: Cloud-based observability platform offering application performance monitoring, infrastructure metrics, and log management for software systems.
+            homepage_url: https://newrelic.com/
+            logo: newrelic.svg
+      - subcategory:
+        name: Metrics & Monitoring
+        items:
+          - item:
+            name: Adobe Analytics
+            description: Web and marketing analytics tool that tracks customer behavior across digital channels to support reporting and audience insights.
+            homepage_url: https://business.adobe.com/products/analytics/adobe-analytics.html
+            logo: adobe-analytics.svg
+          - item:
+            name: Auvik
+            description: Cloud-based network monitoring and management tool that automatically maps network devices and traffic to give IT teams visibility and alerts.
+            homepage_url: https://www.auvik.com/
+            logo: auvik.svg
+          - item:
+            name: Grafana
+            description: Open-source visualization and dashboarding tool used to query, explore, and display metrics and logs from various data sources.
+            homepage_url: https://grafana.com/
+            repo_url: https://github.com/grafana/grafana
+            logo: grafana.svg
+          - item:
+            name: Prometheus
+            description: Open-source monitoring system and time-series database that collects and queries metrics, commonly used for alerting in cloud-native and Kubernetes environments.
+            homepage_url: https://prometheus.io/
+            repo_url: https://github.com/prometheus/prometheus
+            logo: prometheus.svg
+          - item:
+            name: PRTG Network Monitor
+            description: Network monitoring software that tracks devices, bandwidth, and infrastructure health using various protocols like SNMP and WMI.
+            homepage_url: https://www.paessler.com/prtg
+            logo: prtg-network-monitor.svg
+          - item:
+            name: Zabbix
+            description: Open-source monitoring solution for tracking the availability and performance of networks, servers, virtual machines, and applications.
+            homepage_url: https://www.zabbix.com/
+            logo: zabbix.svg
+      - subcategory:
+        name: Log Management
+        items:
+          - item:
+            name: Azure Log Analytics
+            description: Cloud-based service within Azure Monitor that collects and queries log and telemetry data from Azure and on-premises resources.
+            homepage_url: https://azure.microsoft.com/en-us/products/monitor
+            logo: 00009-icon-service-Log-Analytics-Workspaces.svg
+          - item:
+            name: Fluentd
+            description: Open-source data collector that unifies log collection and consumption by parsing, filtering, and routing logs to various backends.
+            homepage_url: https://www.fluentd.org/
+            logo: fluentd.svg
+          - item:
+            name: Logstash
+            description: Server-side data processing pipeline, part of the Elastic Stack, that ingests, transforms, and forwards logs and events to storage or analysis tools.
+            homepage_url: https://www.elastic.co/logstash
+            repo_url: https://github.com/elastic/logstash
+            logo: logstash.svg
+          - item:
+            name: Logz.io
+            description: Cloud-based log management and observability platform built on open-source tools like ELK, Prometheus, and Jaeger for centralized monitoring.
+            homepage_url: https://logz.io/
+            logo: logz-io.svg
+          - item:
+            name: NLog
+            description: Free logging library for .NET applications that supports structured logging and flexible routing of log messages to multiple targets.
+            homepage_url: https://nlog-project.org/
+            logo: nlog.svg
+          - item:
+            name: Serilog
+            description: Structured logging library for .NET that captures log events as data and supports many output sinks for storage and analysis.
+            homepage_url: https://serilog.net/
+            logo: serilog.svg
+          - item:
+            name: Splunk
+            description: Platform for searching, monitoring, and analyzing machine-generated data such as logs, used for operational intelligence and security analytics.
+            homepage_url: https://www.splunk.com/
+            logo: splunk.svg
+  - category:
+    name: Security
+    subcategories:
+      - subcategory:
+        name: Application Security & SCA
+        items:
+          - item:
+            name: Checkmarx
+            description: Static application security testing tool that scans source code to identify security vulnerabilities during development.
+            homepage_url: https://checkmarx.com/
+            logo: checkmarx.svg
+          - item:
+            homepage_url: https://github.com/dependabot
+            logo: dependabot.png
+            name: Dependabot
+            description: GitHub-integrated tool that automatically checks project dependencies for known vulnerabilities and opens pull requests to update them.
+          - item:
+            name: Ghidra
+            description: Open-source software reverse engineering framework developed by the NSA, used to disassemble and decompile binaries for security research and malware analysis.
+            homepage_url: https://ghidra-sre.org/
+            logo: ghidra.svg
+          - item:
+            name: Metasploit
+            description: Penetration testing framework used by security professionals to develop, test, and execute exploit code against target systems.
+            homepage_url: https://www.metasploit.com/
+            logo: metasploit.svg
+          - item:
+            name: OpenSSL
+            description: Open-source toolkit that implements the SSL/TLS protocols and provides cryptographic functions used for secure communications.
+            homepage_url: https://www.openssl.org/
+            logo: openssl.svg
+          - item:
+            name: Prisma Cloud
+            description: Cloud security platform that provides posture management, workload protection, and compliance monitoring across multi-cloud environments.
+            homepage_url: https://www.paloaltonetworks.com/prisma/cloud
+            logo: prisma-cloud.svg
+          - item:
+            name: Snyk
+            description: Developer security platform that scans code, dependencies, containers, and infrastructure-as-code for vulnerabilities, integrating into development workflows.
+            homepage_url: https://snyk.io/
+            logo: snyk.svg
+          - item:
+            name: SonarQube
+            description: Open-source platform for continuous inspection of code quality, detecting bugs, vulnerabilities, and code smells across many programming languages.
+            homepage_url: https://www.sonarqube.org/
+            logo: sonarqube.svg
+          - item:
+            name: ThreatLocker
+            description: Endpoint security platform that uses application allowlisting, ringfencing, and access control to prevent unauthorized software execution and limit attack surfaces.
+            homepage_url: https://www.threatlocker.com/
+            logo: threatlocker.svg
+          - item:
+            name: Veracode
+            description: Application security platform offering static, dynamic, and software composition analysis to find and remediate vulnerabilities in code.
+            homepage_url: https://www.veracode.com/
+            logo: veracode.svg
+      - subcategory:
+        name: Identity & Access
+        items:
+          - item:
+            name: Active Directory
+            description: Microsoft's directory service for Windows domain networks, managing authentication, authorization, and centralized administration of users, computers, and resources.
+            homepage_url: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/ad-ds-getting-started
+            logo: active-directory.svg
+          - item:
+            name: Active Directory Federation Services
+            description: Microsoft service that enables single sign-on and identity federation across organizational boundaries using claims-based authentication protocols.
+            homepage_url: https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/ad-fs-overview
+            logo: active-directory-federation-services.svg
+          - item:
+            name: Auth0
+            description: Identity-as-a-service platform providing authentication, authorization, and user management features for web and mobile applications via APIs and SDKs.
+            homepage_url: https://auth0.com/
+            logo: auth0.svg
+          - item:
+            name: AWS Identity and Access Management (IAM)
+            description: Amazon Web Services feature for managing users, groups, roles, and permissions to control access to AWS resources securely.
+            homepage_url: https://aws.amazon.com/iam/
+            logo: aws-identity-and-access-management-iam.svg
+          - item:
+            name: Azure Active Directory
+            description: Microsoft's cloud-based identity and access management service, enabling single sign-on and secure access to applications for organizations.
+            homepage_url: https://azure.microsoft.com/en-us/products/active-directory/
+            logo: azure-active-directory.svg
+          - item:
+            name: Azure Active Directory B2C
+            description: Microsoft's customer identity access management service that lets businesses add sign-up, sign-in, and identity management to consumer-facing apps.
+            homepage_url: https://azure.microsoft.com/en-us/products/active-directory/external-identities/b2c/
+            logo: azure-active-directory-b2c.svg
+          - item:
+            name: Cisco Duo
+            description: Access security platform providing multi-factor authentication and device trust verification to protect user logins and applications.
+            homepage_url: https://duo.com/
+            logo: cisco-duo.svg
+          - item:
+            name: Google OAuth
+            description: Google's implementation of the OAuth 2.0 protocol, allowing applications to obtain limited access to user accounts and Google APIs.
+            homepage_url: https://developers.google.com/identity/protocols/oauth2
+            logo: google-oauth.svg
+          - item:
+            name: JSON Web Token (JWT)
+            description: Compact, URL-safe token format used to securely transmit claims between parties, commonly for authentication and authorization in web applications.
+            homepage_url: https://jwt.io/
+            logo: json-web-token-jwt.svg
+          - item:
+            name: OAuth
+            description: Open standard protocol that allows applications to obtain limited access to user accounts on another service without exposing passwords.
+            homepage_url: https://oauth.net/
+            logo: oauth.svg
+          - item:
+            name: OAuth 2.0
+            description: Authorization framework version that enables third-party applications to obtain limited access to a user's resources via access tokens.
+            homepage_url: https://oauth.net/2/
+            logo: oauth-2-0.svg
+          - item:
+            name: Okta
+            description: Cloud-based identity management service offering single sign-on, multi-factor authentication, and user directory services for organizations and applications.
+            homepage_url: https://www.okta.com/
+            logo: okta.svg
+          - item:
+            name: OpenID Connect
+            description: Identity layer built on top of OAuth 2.0 that allows applications to verify user identity and obtain basic profile information.
+            homepage_url: https://openid.net/connect/
+            logo: openid-connect.svg
+          - item:
+            name: PKCE
+            description: Extension to OAuth 2.0 that prevents authorization code interception attacks, commonly used in mobile and single-page applications.
+            homepage_url: https://oauth.net/2/pkce/
+            logo: pkce.svg
+          - item:
+            name: SAML
+            description: XML-based open standard for exchanging authentication and authorization data between identity providers and service providers, often used for single sign-on.
+            homepage_url: https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
+            logo: saml.svg
+  - category:
+    name: Cloud Platforms
+    subcategories:
+      - subcategory:
+        name: Public Cloud
+        items:
+          - item:
+            name: Amazon API Gateway
+            description: Managed AWS service for creating, publishing, and securing REST, HTTP, and WebSocket APIs that connect client applications to backend services like Lambda functions.
+            homepage_url: https://aws.amazon.com/api-gateway/
+            logo: amazon-api-gateway.svg
+          - item:
+            name: Amazon CloudFront
+            description: Content delivery network (CDN) from AWS that caches and distributes web content, video, and APIs from edge locations to reduce latency for end users.
+            homepage_url: https://aws.amazon.com/cloudfront/
+            logo: amazon-cloudfront.svg
+          - item:
+            name: Amazon EC2
+            description: AWS service providing resizable virtual server instances in the cloud, used to run applications and workloads without owning physical hardware.
+            homepage_url: https://aws.amazon.com/ec2/
+            logo: amazon-ec2.svg
+          - item:
+            name: Amazon S3
+            description: Object storage service from AWS used to store and retrieve any amount of data, commonly used for backups, static websites, and data lakes.
+            homepage_url: https://aws.amazon.com/s3/
+            logo: amazon-s3.svg
+          - item:
+            name: Amazon Web Services
+            description: Cloud computing platform offering a broad set of on-demand infrastructure and platform services, including compute, storage, databases, networking, and machine learning.
+            homepage_url: https://aws.amazon.com/
+            logo: amazon-web-services.svg
+          - item:
+            name: AWS CLI
+            description: Command-line tool for interacting with and managing AWS services, allowing scripting and automation of cloud resource configuration and control.
+            homepage_url: https://aws.amazon.com/cli/
+            logo: aws-cli.svg
+          - item:
+            name: AWS Elastic Beanstalk
+            description: Platform-as-a-service offering from AWS that automates deployment, scaling, and management of web applications by handling underlying infrastructure like EC2 and load balancers.
+            homepage_url: https://aws.amazon.com/elasticbeanstalk/
+            logo: aws-elastic-beanstalk.svg
+          - item:
+            name: AWS Lambda
+            description: Serverless compute service from AWS that runs code in response to events without requiring users to provision or manage servers.
+            homepage_url: https://aws.amazon.com/lambda/
+            logo: aws-lambda.svg
+          - item:
+            name: Azure AI
+            description: Collection of Microsoft Azure cloud services and tools for building, training, and deploying artificial intelligence and machine learning models and applications.
+            homepage_url: https://azure.microsoft.com/en-us/solutions/ai/
+            logo: azure-ai.svg
+          - item:
+            name: Azure AI Foundry
+            description: Microsoft Azure platform for building, evaluating, and deploying generative AI applications and agents, combining models, tools, and orchestration in one workspace.
+            homepage_url: https://azure.microsoft.com/en-us/products/ai-foundry
+            logo: azure-ai-foundry.svg
+          - item:
+            name: Azure API Management
+            description: Azure service for publishing, securing, monitoring, and managing APIs, providing a gateway along with developer portal and analytics capabilities.
+            homepage_url: https://azure.microsoft.com/en-us/products/api-management/
+            logo: azure-api-management.svg
+          - item:
+            name: Azure App Service
+            description: Fully managed platform-as-a-service on Azure for building, hosting, and scaling web apps, REST APIs, and mobile backends without managing infrastructure.
+            homepage_url: https://azure.microsoft.com/en-us/products/app-service
+            logo: azure-app-service.svg
+          - item:
+            name: Azure Blob Storage
+            description: Azure's object storage solution for storing large amounts of unstructured data such as documents, images, and backups, accessible over HTTP/HTTPS.
+            homepage_url: https://azure.microsoft.com/en-us/products/storage/blobs
+            logo: azure-blob-storage.svg
+          - item:
+            name: Azure Data Lake
+            description: Azure storage service designed for large-scale analytics workloads, allowing storage of structured and unstructured data at scale for big data processing.
+            homepage_url: https://azure.microsoft.com/en-us/products/storage/data-lake-storage/
+            logo: azure-data-lake.svg
+          - item:
+            name: Azure Data Lake Storage
+            description: Azure storage service designed for large-scale analytics workloads, allowing storage of structured and unstructured data at scale for big data processing.
+            homepage_url: https://azure.microsoft.com/en-us/products/storage/data-lake-storage/
+            logo: azure-data-lake-storage.svg
+          - item:
+            name: Azure Durable Functions
+            description: Extension of Azure Functions that enables writing stateful, long-running workflows using ordinary code, managing orchestration and state automatically in a serverless environment.
+            homepage_url: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+            logo: azure-durable-functions.svg
+          - item:
+            name: Azure Functions
+            description: Serverless compute service on Azure that runs event-triggered code without requiring explicit provisioning or management of servers.
+            homepage_url: https://azure.microsoft.com/en-us/products/functions
+            logo: azure-functions.svg
+          - item:
+            name: Azure IaaS
+            description: Infrastructure-as-a-service offerings on Azure that provide virtualized computing resources like virtual machines, storage, and networking over the internet.
+            homepage_url: https://azure.microsoft.com/en-us/overview/what-is-iaas/
+            logo: azure-iaas.svg
+          - item:
+            name: Azure Logic Apps
+            description: Azure cloud service for building automated workflows that integrate apps, data, and services using a visual designer and prebuilt connectors.
+            homepage_url: https://azure.microsoft.com/en-us/products/logic-apps
+            logo: azure-logic-apps.svg
+          - item:
+            name: Azure OpenAI Service
+            description: Azure offering that provides access to OpenAI's language and generative models through Azure's cloud infrastructure, with enterprise security and integration features.
+            homepage_url: https://azure.microsoft.com/en-us/products/ai-services/openai-service/
+            logo: azure-openai-service.svg
+          - item:
+            name: Azure Storage
+            description: Cloud storage service from Microsoft Azure offering scalable blob, file, queue, and table storage for applications and data workloads.
+            homepage_url: https://azure.microsoft.com/en-us/products/storage/
+            logo: azure-storage.svg
+          - item:
+            name: Azure Virtual Desktop
+            description: Microsoft's cloud service for delivering virtual desktops and remote applications, allowing users to access Windows environments hosted in Azure from any device.
+            homepage_url: https://azure.microsoft.com/en-us/products/virtual-desktop/
+            logo: azure-virtual-desktop.svg
+          - item:
+            name: Azure Virtual Machines
+            description: Infrastructure-as-a-service offering from Microsoft Azure that lets users provision and run Windows or Linux virtual machines on demand in the cloud.
+            homepage_url: https://azure.microsoft.com/en-us/products/virtual-machines/
+            logo: azure-virtual-machines.svg
+          - item:
+            name: Citrix DaaS
+            description: Desktop-as-a-service offering from Citrix that delivers virtual desktops and applications hosted in the cloud to end-user devices, managed centrally by IT.
+            homepage_url: https://www.citrix.com/products/citrix-daas/
+            logo: citrix-daas.svg
+          - item:
+            name: Citrix Virtual Apps and Desktops
+            description: Virtualization software suite from Citrix used to deliver centrally managed applications and desktops to users across various devices and locations.
+            homepage_url: https://www.citrix.com/products/citrix-virtual-apps-and-desktops/
+            logo: citrix-virtual-apps-and-desktops.svg
+          - item:
+            name: Cloud Foundry
+            description: Open-source platform-as-a-service used to deploy, run, and scale applications across multiple cloud infrastructures without managing underlying servers directly.
+            homepage_url: https://www.cloudfoundry.org/
+            logo: cloud-foundry.svg
+          - item:
+            name: Exchange Online
+            description: Microsoft's cloud-hosted email and calendaring service, part of Microsoft 365, providing business email, scheduling, and mailbox management without on-premises servers.
+            homepage_url: https://www.microsoft.com/en-us/microsoft-365/exchange/email
+            logo: exchange-online.svg
+          - item:
+            name: Firebase
+            description: Google's platform for building mobile and web applications, offering tools such as a hosted database, authentication, hosting, and analytics.
+            homepage_url: https://firebase.google.com/
+            logo: firebase.svg
+          - item:
+            name: Google Cloud Functions
+            description: Serverless compute service on Google Cloud that runs event-triggered code without requiring users to manage servers or infrastructure.
+            homepage_url: https://cloud.google.com/functions
+            logo: google-cloud-functions.svg
+          - item:
+            name: Google Cloud Platform
+            description: Suite of cloud computing services from Google, including compute, storage, databases, networking, and machine learning tools for building and running applications.
+            homepage_url: https://cloud.google.com/
+            logo: google-cloud-platform.svg
+          - item:
+            name: Google Maps Platform
+            description: Set of APIs and SDKs from Google that let developers embed maps, geocoding, routing, and location-based services into websites and applications.
+            homepage_url: https://developers.google.com/maps
+            logo: google-maps-platform.svg
+          - item:
+            name: Heroku
+            description: Cloud platform-as-a-service that lets developers deploy, manage, and scale applications without handling the underlying infrastructure.
+            homepage_url: https://www.heroku.com/
+            logo: heroku.svg
+          - item:
+            name: Microsoft Azure
+            description: Microsoft's cloud computing platform providing a broad set of services including compute, storage, networking, databases, and AI for building and hosting applications.
+            homepage_url: https://azure.microsoft.com/
+            logo: microsoft-azure.svg
+          - item:
+            name: Microsoft Cloud Solution Provider
+            description: Microsoft partner program that lets certified partners resell and manage Microsoft cloud services like Azure and Microsoft 365 directly to customers, including billing and support.
+            homepage_url: https://partner.microsoft.com/en-us/solutions/csp
+            logo: microsoft-cloud-solution-provider.svg
+          - item:
+            name: Nerdio
+            description: Management platform that simplifies deployment, automation, and cost optimization of Azure Virtual Desktop, Windows 365, and related Microsoft cloud environments for IT teams and MSPs.
+            homepage_url: https://getnerdio.com/
+            logo: nerdio.svg
+          - item:
+            name: Vercel
+            description: Cloud platform for deploying and hosting frontend web applications, offering automatic scaling, serverless functions, and integration with frameworks like Next.js.
+            homepage_url: https://vercel.com/
+            logo: vercel.svg
+          - item:
+            name: Vertex AI
+            description: Google Cloud's managed machine learning platform for building, training, and deploying AI models, including tools for generative AI applications.
+            homepage_url: https://cloud.google.com/vertex-ai
+            logo: vertex-ai.svg
