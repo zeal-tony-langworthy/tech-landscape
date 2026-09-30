@@ -28,6 +28,7 @@ import argparse
 import helpers
 import extract
 import review
+import apply
 from pathlib import Path
 
 def main():
@@ -48,6 +49,11 @@ def main():
     p.add_argument("--min-docs", type=int, default=1,
                    help="Only include skills mentioned in at least this many PDFs")
     p.set_defaults(func=review.cmd_review)
+
+    p = sub.add_parser("apply", help="Add approved skills from new_skills.yml to data.yml")
+    p.add_argument("--placeholder-logo",
+                   help="Logo file to use when an item's logo doesn't exist yet")
+    p.set_defaults(func=apply.cmd_apply)
 
     args = parser.parse_args()
     args.func(args)

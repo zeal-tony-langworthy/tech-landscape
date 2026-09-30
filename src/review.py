@@ -6,6 +6,7 @@ from collections import defaultdict
 from ruamel.yaml.comments import CommentedMap, CommentedSeq
 from constants import EXTRACT_DIR, REVIEW_FILE
 from taxonomy import TAXONOMY, render_taxonomy, is_valid
+from descriptions import generate_descriptions, needs_description
 
 
 # ---------------------------------------------------------------------------
@@ -227,6 +228,43 @@ def sort_key(entry) -> tuple:
     return (cat_i, sub_i, str(sub or ""), entry["name"].lower())
 
 
+def add_descriptions(entries, landscape, args):
+    """Give every entry a description: keep a real one from data.yml, otherwise have
+    Claude write one (placeholders like "This is the description of Java" count as
+    missing). Generated ones are marked so the reviewer can check them."""
+    items = {
+        helpers.normalize(item["name"]): item
+        for cat in landscape["landscape"]
+        for sub in cat.get("subcategories") or []
+        for item in sub.get("items") or []
+    }
+    todo = []
+    for e in entries:
+        item = items.get(helpers.normalize(e.get("current_name") or "")) if e["status"] == "existing" else None
+        current = item.get("description") if item else None
+        homepage = item.get("homepage_url") if item else e.get("homepage_url")
+        position = list(e.keys()).index("name") + 1
+        if not needs_description(current):
+            e.insert(position, "description", current)
+        else:
+            e.insert(position, "description", None)
+            todo.append((e, homepage))
+
+    if not todo or not getattr(args, "describe", True):
+        return
+    generated = generate_descriptions([(e["name"], url) for e, url in todo])
+    for e, _ in todo:
+        d = generated.get(helpers.normalize(e["name"]))
+        if not d:
+            e["note"] = ((e.get("note") or "") + " No description generated; write one.").strip()
+            continue
+        e["description"] = d["description"]
+        position = list(e.keys()).index("description") + 1
+        e.insert(position, "description_generated", True)
+        if d.get("confidence") == "low":
+            e["note"] = ((e.get("note") or "") + " Description is low confidence.").strip()
+
+
 def cmd_review(args):
     landscape = helpers.load_landscape(args.data)
     existing = helpers.existing_items(landscape)  # normalized -> name in data.yml
@@ -357,6 +395,7 @@ def cmd_review(args):
             entry["note"] = " ".join(notes)
         entries.append(entry)
 
+    add_descriptions(entries, landscape, args)
     entries.sort(key=sort_key)
 
     yaml = helpers.make_yaml()
@@ -376,6 +415,7 @@ def cmd_review(args):
             "# approve defaults to false for low confidence, proposed new subcategories,\n"
             "# and skip suggestions. Edit any field as needed.\n"
             "# documents = how many PDFs mention the skill.\n"
+            "# description_generated: true = written by Claude; check it before apply.\n"
         )
         yaml.dump({"skills": entries}, fh)
 

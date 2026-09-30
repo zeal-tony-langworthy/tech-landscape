@@ -13,28 +13,110 @@
 # 1-3 are reserved to illustrate the hierarchy of categories and subcategories.
 
 categories:
-  - category: "Category 1"
+  - category: "Programming Languages"
     content: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+      TODO: describe Programming Languages.
     subcategories:
-      - subcategory: "Subcategory 1-1"
+      - subcategory: "General Purpose"
         content: |
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      - subcategory: "Subcategory 1-2"
+          TODO: describe General Purpose.
+      - subcategory: "Web & Scripting"
         content: |
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  - category: "Category 2"
+          TODO: describe Web & Scripting.
+      - subcategory: "Systems"
+        content: |
+          TODO: describe Systems.
+  - category: "Frameworks & Libraries"
     content: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+      TODO: describe Frameworks & Libraries.
     subcategories:
-      - subcategory: "Subcategory 2-1"
+      - subcategory: "Backend Frameworks"
         content: |
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      - subcategory: "Subcategory 2-2"
+          TODO: describe Backend Frameworks.
+      - subcategory: "Frontend Frameworks"
         content: |
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          TODO: describe Frontend Frameworks.
+      - subcategory: "Mobile Frameworks"
+        content: |
+          TODO: describe Mobile Frameworks.
+  - category: "Databases & Data Stores"
+    content: |
+      TODO: describe Databases & Data Stores.
+    subcategories:
+      - subcategory: "Relational"
+        content: |
+          TODO: describe Relational.
+      - subcategory: "Document"
+        content: |
+          TODO: describe Document.
+      - subcategory: "Key-Value & In-Memory"
+        content: |
+          TODO: describe Key-Value & In-Memory.
+      - subcategory: "Wide-Column"
+        content: |
+          TODO: describe Wide-Column.
+      - subcategory: "Search"
+        content: |
+          TODO: describe Search.
+      - subcategory: "Schema Migration"
+        content: |
+          TODO: describe Schema Migration.
+  - category: "Data Engineering"
+    content: |
+      TODO: describe Data Engineering.
+    subcategories:
+      - subcategory: "Workflow Orchestration"
+        content: |
+          TODO: describe Workflow Orchestration.
+      - subcategory: "Streaming & Messaging"
+        content: |
+          TODO: describe Streaming & Messaging.
+      - subcategory: "Data Processing"
+        content: |
+          TODO: describe Data Processing.
+  - category: "DevOps & CI/CD"
+    content: |
+      TODO: describe DevOps & CI/CD.
+    subcategories:
+      - subcategory: "CI/CD Pipelines"
+        content: |
+          TODO: describe CI/CD Pipelines.
+      - subcategory: "Infrastructure as Code"
+        content: |
+          TODO: describe Infrastructure as Code.
+      - subcategory: "Configuration Management"
+        content: |
+          TODO: describe Configuration Management.
+      - subcategory: "Containers & Orchestration"
+        content: |
+          TODO: describe Containers & Orchestration.
+  - category: "Observability"
+    content: |
+      TODO: describe Observability.
+    subcategories:
+      - subcategory: "APM"
+        content: |
+          TODO: describe APM.
+      - subcategory: "Metrics & Monitoring"
+        content: |
+          TODO: describe Metrics & Monitoring.
+      - subcategory: "Log Management"
+        content: |
+          TODO: describe Log Management.
+  - category: "Security"
+    content: |
+      TODO: describe Security.
+    subcategories:
+      - subcategory: "Application Security & SCA"
+        content: |
+          TODO: describe Application Security & SCA.
+      - subcategory: "Identity & Access"
+        content: |
+          TODO: describe Identity & Access.
+  - category: "Cloud Platforms"
+    content: |
+      TODO: describe Cloud Platforms.
+    subcategories:
+      - subcategory: "Public Cloud"
+        content: |
+          TODO: describe Public Cloud.
